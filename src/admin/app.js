@@ -1,3 +1,6 @@
+import logo from "./extensions/logo.svg";
+import favicon from "./extensions/infinity.svg";
+
 const config = {
   locales: [
     // 'ar',
@@ -27,6 +30,20 @@ const config = {
     // 'zh-Hans',
     // 'zh',
   ],
+  auth: {
+    logo: logo,
+  },
+  menu: {
+    logo: favicon,
+  },
+  head: {
+    favicon: favicon,
+  },
+  translations: {
+    en: {
+      "app.components.LeftMenu.navbrand.title": "ERM Dashboard",
+    },
+  },
 };
 
 const bootstrap = (app) => {
