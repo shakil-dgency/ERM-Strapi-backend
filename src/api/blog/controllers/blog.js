@@ -14,7 +14,7 @@ module.exports = createCoreController("api::blog.blog", ({ strapi }) => ({
     // It is strongly recommended to use sanitizeQuery even if validateQuery is used
     const entity = await strapi.db.query("api::blog.blog").findOne({
       where: { slug: id },
-      populate: ["cover_image"],
+      populate: ["cover_image", "seo"],
     });
     const sanitizedResults = await this.sanitizeOutput(entity, ctx);
 
