@@ -1,17 +1,42 @@
 // strapi-api/config/database.js
 
+// module.exports = ({ env }) => ({
+//   defaultConnection: "default",
+//   connection: {
+//     client: "postgres",
+//     connection: {
+//       host: env("DATABASE_HOST", "localhost"),
+//       port: env.int("DATABASE_PORT", 5432),
+//       database: env("DATABASE_NAME", "ERM"),
+//       user: env("DATABASE_USER", "postgres"),
+//       password: env("DATABASE_PASSWORD", "shakil1660"),
+//       schema: env("DATABASE_SCHEMA", "public"),
+//     },
+//   },
+// });
+
+// ------------------------------------
+
+const parse = require("pg-connection-string").parse;
+
+const { host, port, database, user, password } = parse(
+  process.env.DATABASE_URL
+);
+
 module.exports = ({ env }) => ({
-  defaultConnection: "default",
   connection: {
     client: "postgres",
     connection: {
-      host: env("DATABASE_HOST", "localhost"),
-      port: env.int("DATABASE_PORT", 5432),
-      database: env("DATABASE_NAME", "ERM"),
-      user: env("DATABASE_USER", "postgres"),
-      password: env("DATABASE_PASSWORD", "shakil1660"),
-      schema: env("DATABASE_SCHEMA", "public"),
+      host,
+      port,
+      database,
+      user,
+      password,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     },
+    debug: false,
   },
 });
 

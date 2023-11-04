@@ -4,8 +4,7 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog",
-    "description": ""
+    "displayName": "Blog"
   },
   "options": {
     "draftAndPublish": true
@@ -17,12 +16,11 @@
       "required": true
     },
     "cover_image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "description": {
       "type": "richtext",
@@ -31,8 +29,7 @@
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo",
-      "required": true
+      "component": "shared.seo"
     }
   }
 }

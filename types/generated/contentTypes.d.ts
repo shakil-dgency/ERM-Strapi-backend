@@ -683,16 +683,15 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     singularName: 'blog';
     pluralName: 'blogs';
     displayName: 'Blog';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.Text & Attribute.Required;
-    cover_image: Attribute.Media & Attribute.Required;
+    cover_image: Attribute.Media;
     description: Attribute.RichText & Attribute.Required;
-    seo: Attribute.Component<'shared.seo'> & Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -703,24 +702,34 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
+export interface ApiPricePrice extends Schema.CollectionType {
+  collectionName: 'prices';
   info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'Test';
+    singularName: 'price';
+    pluralName: 'prices';
+    displayName: 'Price';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    service_title: Attribute.String & Attribute.Required;
+    service_item: Attribute.DynamicZone<['price.service-item']> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::price.price',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::price.price',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -742,7 +751,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
-      'api::test.test': ApiTestTest;
+      'api::price.price': ApiPricePrice;
     }
   }
 }

@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface PriceServiceItem extends Schema.Component {
+  collectionName: 'components_price_service_items';
+  info: {
+    displayName: 'Service Item';
+  };
+  attributes: {
+    item_title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media;
+    price: Attribute.Float & Attribute.Required;
+    unique_id: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -54,6 +68,7 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'price.service-item': PriceServiceItem;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

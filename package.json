@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "strapi build",
-    "develop": "strapi develop",
+    "develop": "SET NODE_ENV=production & strapi develop",
     "production": "cross-env NODE_ENV=production npm run build",
     "start": "strapi start",
     "strapi": "strapi"
