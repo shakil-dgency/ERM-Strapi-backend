@@ -50,8 +50,6 @@ const bootstrap = (app) => {
   console.log(app);
 };
 
-//this is app config file
-
 export default {
   config,
   bootstrap,
