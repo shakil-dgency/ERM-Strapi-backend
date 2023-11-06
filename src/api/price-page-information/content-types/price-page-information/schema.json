@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "price_page_informations",
+  "info": {
+    "singularName": "price-page-information",
+    "pluralName": "price-page-informations",
+    "displayName": "Price Page Information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_heading": {
+      "type": "text",
+      "required": true
+    },
+    "hero_description": {
+      "type": "text",
+      "required": true
+    },
+    "price_card_heading": {
+      "type": "text",
+      "required": true
+    },
+    "pricing_situations": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "price_card_inside_note": {
+      "type": "text",
+      "required": true,
+      "default": "NB:"
+    },
+    "price_card_outside_note": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

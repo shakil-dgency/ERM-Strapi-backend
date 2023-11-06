@@ -1,7 +1,8 @@
 {
   "collectionName": "components_price_service_items",
   "info": {
-    "displayName": "Service Item"
+    "displayName": "Service Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,15 +15,17 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "price": {
-      "type": "float",
-      "required": true
+      "type": "integer",
+      "required": true,
+      "default": 0
     },
     "unique_id": {
       "type": "string",

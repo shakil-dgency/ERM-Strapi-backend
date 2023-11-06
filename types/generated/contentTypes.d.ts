@@ -718,6 +718,7 @@ export interface ApiPricePrice extends Schema.CollectionType {
     singularName: 'price';
     pluralName: 'prices';
     displayName: 'Price';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -744,6 +745,53 @@ export interface ApiPricePrice extends Schema.CollectionType {
   };
 }
 
+export interface ApiPricePageInformationPricePageInformation
+  extends Schema.SingleType {
+  collectionName: 'price_page_informations';
+  info: {
+    singularName: 'price-page-information';
+    pluralName: 'price-page-informations';
+    displayName: 'Price Page Information';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_heading: Attribute.Text & Attribute.Required;
+    hero_description: Attribute.Text & Attribute.Required;
+    price_card_heading: Attribute.Text & Attribute.Required;
+    pricing_situations: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    price_card_inside_note: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'NB:'>;
+    price_card_outside_note: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::price-page-information.price-page-information',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::price-page-information.price-page-information',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -762,6 +810,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
       'api::price.price': ApiPricePrice;
+      'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
     }
   }
 }

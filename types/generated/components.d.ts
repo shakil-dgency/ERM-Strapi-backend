@@ -4,12 +4,13 @@ export interface PriceServiceItem extends Schema.Component {
   collectionName: 'components_price_service_items';
   info: {
     displayName: 'Service Item';
+    description: '';
   };
   attributes: {
     item_title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
     image: Attribute.Media;
-    price: Attribute.Float & Attribute.Required;
+    price: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
     unique_id: Attribute.String & Attribute.Required;
   };
 }

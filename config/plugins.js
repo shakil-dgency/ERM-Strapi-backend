@@ -4,7 +4,7 @@
 //       enabled: true,
 //     },
 //   };
-// };
+// };'
 
 module.exports = ({ env }) => ({
   // ...
