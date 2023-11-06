@@ -42,7 +42,11 @@ const config = {
   translations: {
     en: {
       "app.components.LeftMenu.navbrand.title": "ERM Dashboard",
+      "Auth.form.welcome.title": "Adventure Awaits!",
+      "Auth.form.welcome.subtitle":
+        "Log in to your account and have lots of fun!",
     },
+    "pt-BR": {},
   },
 };
 
