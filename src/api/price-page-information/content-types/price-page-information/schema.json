@@ -24,7 +24,7 @@
       "type": "text",
       "required": true
     },
-    "pricing_situations": {
+    "situation1": {
       "type": "customField",
       "options": {
         "output": "HTML",
@@ -41,6 +41,15 @@
     "price_card_outside_note": {
       "type": "text",
       "required": true
+    },
+    "situation2": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

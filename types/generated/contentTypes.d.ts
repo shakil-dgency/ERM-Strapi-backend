@@ -761,7 +761,7 @@ export interface ApiPricePageInformationPricePageInformation
     hero_heading: Attribute.Text & Attribute.Required;
     hero_description: Attribute.Text & Attribute.Required;
     price_card_heading: Attribute.Text & Attribute.Required;
-    pricing_situations: Attribute.RichText &
+    situation1: Attribute.RichText &
       Attribute.Required &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
@@ -774,6 +774,15 @@ export interface ApiPricePageInformationPricePageInformation
       Attribute.Required &
       Attribute.DefaultTo<'NB:'>;
     price_card_outside_note: Attribute.Text & Attribute.Required;
+    situation2: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
