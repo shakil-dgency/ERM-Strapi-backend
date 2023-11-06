@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_usp_usp_cards",
+  "info": {
+    "displayName": "USP card"
+  },
+  "options": {},
+  "attributes": {
+    "card_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "card_heading": {
+      "type": "string",
+      "required": true
+    },
+    "card_description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

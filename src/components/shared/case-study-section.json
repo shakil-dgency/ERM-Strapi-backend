@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_case_study_sections",
+  "info": {
+    "displayName": "Case Study Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "first_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_title": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "casestudy_card": {
+      "displayName": "Case Study Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.case-study-card",
+      "required": true
+    },
+    "down_cta": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

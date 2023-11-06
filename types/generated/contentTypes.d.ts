@@ -712,6 +712,42 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
+  collectionName: 'google_ads_agencies';
+  info: {
+    singularName: 'google-ads-agency';
+    pluralName: 'google-ads-agencies';
+    displayName: 'Google Ads Agency';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'>;
+    usp_section: Attribute.Component<'shared.service-usp-section'>;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::google-ads-agency.google-ads-agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::google-ads-agency.google-ads-agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPricePrice extends Schema.CollectionType {
   collectionName: 'prices';
   info: {
@@ -818,6 +854,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
     }

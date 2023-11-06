@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_shared_cro_opportunities",
+  "info": {
+    "displayName": "CRO Opportunities"
+  },
+  "options": {},
+  "attributes": {
+    "first_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cro_button": {
+      "type": "text",
+      "required": true
+    },
+    "cta1": {
+      "type": "string",
+      "required": true
+    },
+    "cta2": {
+      "type": "string",
+      "required": true
+    },
+    "cta3": {
+      "type": "string",
+      "required": true
+    },
+    "cta4": {
+      "type": "string",
+      "required": true
+    },
+    "opportunities1": {
+      "type": "string",
+      "required": true
+    },
+    "opportunities2": {
+      "type": "string",
+      "required": true
+    },
+    "opportunities3": {
+      "type": "string",
+      "required": true
+    },
+    "opportunities4": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

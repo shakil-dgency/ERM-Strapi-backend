@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_usp_case_study_cards",
+  "info": {
+    "displayName": "Case Study Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "case_category": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "default": "Please provide a unique slug"
+    }
+  }
+}

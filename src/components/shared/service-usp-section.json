@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_service_usp_sections",
+  "info": {
+    "displayName": "Service USP Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "first_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "card_content": {
+      "displayName": "USP card",
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.usp-card",
+      "required": true
+    }
+  }
+}
