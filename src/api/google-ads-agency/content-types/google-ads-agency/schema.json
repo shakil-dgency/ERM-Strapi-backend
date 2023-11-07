@@ -33,6 +33,12 @@
       "repeatable": false,
       "required": true,
       "component": "shared.case-study-section"
+    },
+    "list_of_service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.list-of-service",
+      "required": true
     }
   }
 }

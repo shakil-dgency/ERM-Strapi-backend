@@ -730,6 +730,8 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
       Attribute.Required;
     casestudy_section: Attribute.Component<'shared.case-study-section'> &
       Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

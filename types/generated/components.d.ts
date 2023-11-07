@@ -52,6 +52,23 @@ export interface SharedCroOpportunities extends Schema.Component {
   };
 }
 
+export interface SharedListOfService extends Schema.Component {
+  collectionName: 'components_shared_list_of_services';
+  info: {
+    displayName: 'List of Service';
+    description: '';
+  };
+  attributes: {
+    first_title: Attribute.String & Attribute.Required;
+    second_title: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    list_left: Attribute.Component<'usp.service-list', true> &
+      Attribute.Required;
+    list_right: Attribute.Component<'usp.service-list', true> &
+      Attribute.Required;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -149,6 +166,18 @@ export interface UspCaseStudyCard extends Schema.Component {
   };
 }
 
+export interface UspServiceList extends Schema.Component {
+  collectionName: 'components_usp_service_lists';
+  info: {
+    displayName: 'Service List';
+    description: '';
+  };
+  attributes: {
+    list_title: Attribute.String & Attribute.Required;
+    tooltip_description: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface UspUspCard extends Schema.Component {
   collectionName: 'components_usp_usp_cards';
   info: {
@@ -167,11 +196,13 @@ declare module '@strapi/types' {
       'price.service-item': PriceServiceItem;
       'shared.case-study-section': SharedCaseStudySection;
       'shared.cro-opportunities': SharedCroOpportunities;
+      'shared.list-of-service': SharedListOfService;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'shared.service-hero': SharedServiceHero;
       'shared.service-usp-section': SharedServiceUspSection;
       'usp.case-study-card': UspCaseStudyCard;
+      'usp.service-list': UspServiceList;
       'usp.usp-card': UspUspCard;
     }
   }

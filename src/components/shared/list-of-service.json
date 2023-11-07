@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_list_of_services",
+  "info": {
+    "displayName": "List of Service",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "first_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "list_left": {
+      "displayName": "Service List",
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.service-list",
+      "required": true
+    },
+    "list_right": {
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.service-list",
+      "required": true
+    }
+  }
+}
