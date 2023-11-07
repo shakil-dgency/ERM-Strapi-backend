@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_usp_all_service_cards",
+  "info": {
+    "displayName": "All Service Card"
+  },
+  "options": {},
+  "attributes": {
+    "card_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_description": {
+      "type": "text",
+      "required": true
+    },
+    "card_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

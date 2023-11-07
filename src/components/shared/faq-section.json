@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_shared_service_usp_sections",
+  "collectionName": "components_shared_faq_sections",
   "info": {
-    "displayName": "Service USP Section",
+    "displayName": "Faq Section",
     "description": ""
   },
   "options": {},
@@ -11,18 +11,21 @@
       "required": true
     },
     "title_second_line": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "card_content": {
-      "displayName": "USP card",
+    "question_and_answer": {
+      "displayName": "Faq Question And Answer",
       "type": "component",
       "repeatable": true,
-      "component": "usp.usp-card",
+      "component": "usp.faq-question-and-answer",
+      "required": true
+    },
+    "descriptive_cta": {
+      "type": "string",
       "required": true
     }
   }

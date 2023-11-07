@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_shared_list_of_services",
+  "collectionName": "components_shared_key_services",
   "info": {
-    "displayName": "List of Service",
+    "displayName": "Key Service",
     "description": ""
   },
   "options": {},
@@ -17,17 +17,21 @@
       "type": "text",
       "required": true
     },
-    "list_left": {
-      "displayName": "Service List",
+    "long_first_card": {
+      "displayName": "Key Service Card",
       "type": "component",
-      "repeatable": true,
-      "component": "usp.service-list",
+      "repeatable": false,
+      "component": "usp.key-service-card",
       "required": true
     },
-    "list_right": {
+    "others_card": {
       "type": "component",
       "repeatable": true,
-      "component": "usp.service-list",
+      "component": "usp.key-service-card",
+      "required": true
+    },
+    "descriptive_cta": {
+      "type": "string",
       "required": true
     }
   }

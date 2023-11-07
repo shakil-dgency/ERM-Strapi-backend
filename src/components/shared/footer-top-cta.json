@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_shared_service_usp_sections",
+  "collectionName": "components_shared_footer_top_ctas",
   "info": {
-    "displayName": "Service USP Section",
+    "displayName": "Footer Top CTA",
     "description": ""
   },
   "options": {},
@@ -15,14 +15,10 @@
       "required": false
     },
     "description": {
-      "type": "text",
-      "required": true
+      "type": "text"
     },
-    "card_content": {
-      "displayName": "USP card",
-      "type": "component",
-      "repeatable": true,
-      "component": "usp.usp-card",
+    "cta": {
+      "type": "string",
       "required": true
     }
   }

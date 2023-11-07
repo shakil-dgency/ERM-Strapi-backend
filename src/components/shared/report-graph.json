@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_report_graphs",
+  "info": {
+    "displayName": "Report Graph"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

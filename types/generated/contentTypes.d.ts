@@ -724,13 +724,25 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    hero: Attribute.Component<'shared.service-hero'>;
-    usp_section: Attribute.Component<'shared.service-usp-section'>;
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
     cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
       Attribute.Required;
     casestudy_section: Attribute.Component<'shared.case-study-section'> &
       Attribute.Required;
     list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    key_service: Attribute.Component<'shared.key-service'> & Attribute.Required;
+    all_service_section: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'>;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

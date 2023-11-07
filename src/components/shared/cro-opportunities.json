@@ -1,56 +1,65 @@
 {
   "collectionName": "components_shared_cro_opportunities",
   "info": {
-    "displayName": "CRO Opportunities"
+    "displayName": "CRO Opportunities",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "first_title": {
+    "title_first_line": {
       "type": "string",
       "required": true
     },
-    "second_title": {
+    "title_second_line": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "cro_button": {
+    "cro_cta": {
       "type": "text",
       "required": true
     },
-    "cta1": {
+    "cro_title1": {
       "type": "string",
       "required": true
     },
-    "cta2": {
+    "cro_title2": {
       "type": "string",
       "required": true
     },
-    "cta3": {
+    "cro_title3": {
       "type": "string",
       "required": true
     },
-    "cta4": {
+    "cro_title4": {
       "type": "string",
       "required": true
     },
-    "opportunities1": {
+    "cro_description1": {
       "type": "string",
       "required": true
     },
-    "opportunities2": {
+    "cro_description2": {
       "type": "string",
       "required": true
     },
-    "opportunities3": {
+    "cro_description3": {
       "type": "string",
       "required": true
     },
-    "opportunities4": {
+    "cro_description4": {
       "type": "string",
+      "required": true
+    },
+    "cro_opportunity_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
       "required": true
     }
   }

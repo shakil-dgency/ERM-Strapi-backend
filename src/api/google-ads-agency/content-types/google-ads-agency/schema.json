@@ -15,12 +15,14 @@
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.service-hero"
+      "component": "shared.service-hero",
+      "required": true
     },
     "usp_section": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.service-usp-section"
+      "component": "shared.service-usp-section",
+      "required": true
     },
     "cro_opportunities": {
       "type": "component",
@@ -38,6 +40,47 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.list-of-service",
+      "required": true
+    },
+    "key_service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.key-service",
+      "required": true
+    },
+    "all_service_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.all-service-section",
+      "required": true
+    },
+    "dedicated_team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.dedicated-team",
+      "required": true
+    },
+    "report_graph": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.report-graph"
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.faq-section",
+      "required": true
+    },
+    "testimonial_carousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial-carousel",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
       "required": true
     }
   }

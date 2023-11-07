@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_testimonial_carousels",
+  "info": {
+    "displayName": "Testimonial Carousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "testimonial_data": {
+      "displayName": "Testimonial Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.testimonial-card",
+      "required": true
+    },
+    "descriptive_cta": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

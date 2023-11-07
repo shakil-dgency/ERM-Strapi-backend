@@ -1,45 +1,46 @@
 {
   "collectionName": "components_shared_service_heroes",
   "info": {
-    "displayName": "Service Hero"
+    "displayName": "Service Hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "first_title": {
+    "title_first_line": {
       "type": "string",
       "required": true
     },
-    "second_title": {
+    "title_second_line": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "hero_description": {
       "type": "text",
       "required": true
     },
-    "hero_button": {
+    "hero_cta": {
       "type": "string",
       "required": true
     },
-    "short_description": {
+    "description_under_cta": {
       "type": "string",
       "required": true
     },
     "left_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "right_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

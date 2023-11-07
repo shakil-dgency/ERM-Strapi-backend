@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_usp_key_service_cards",
+  "info": {
+    "displayName": "Key Service Card"
+  },
+  "options": {},
+  "attributes": {
+    "card_title": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

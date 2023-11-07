@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_service_usp_sections",
+  "collectionName": "components_shared_all_service_sections",
   "info": {
-    "displayName": "Service USP Section",
-    "description": ""
+    "displayName": "All Service Section"
   },
   "options": {},
   "attributes": {
@@ -11,18 +10,17 @@
       "required": true
     },
     "title_second_line": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "card_content": {
-      "displayName": "USP card",
+    "all_service_card": {
+      "displayName": "All Service Card",
       "type": "component",
       "repeatable": true,
-      "component": "usp.usp-card",
+      "component": "usp.all-service-card",
       "required": true
     }
   }

@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_case_study_sections",
+  "collectionName": "components_shared_dedicated_teams",
   "info": {
-    "displayName": "Case Study Section",
-    "description": ""
+    "displayName": "Dedicated Team"
   },
   "options": {},
   "attributes": {
@@ -11,18 +10,18 @@
       "required": true
     },
     "title_second_line": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "casestudy_card": {
-      "displayName": "Case Study Card",
-      "type": "component",
-      "repeatable": true,
-      "component": "usp.case-study-card",
+    "team_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
       "required": true
     },
     "descriptive_cta": {

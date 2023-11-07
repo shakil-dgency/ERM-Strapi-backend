@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_usp_faq_question_and_answers",
+  "info": {
+    "displayName": "Faq Question And Answer"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
