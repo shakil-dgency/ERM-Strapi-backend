@@ -1,7 +1,8 @@
 {
   "collectionName": "components_usp_key_service_cards",
   "info": {
-    "displayName": "Key Service Card"
+    "displayName": "Choose How You Work Card",
+    "description": ""
   },
   "options": {},
   "attributes": {

@@ -42,13 +42,19 @@
       "component": "shared.list-of-service",
       "required": true
     },
-    "key_service": {
+    "choose_how_you_work": {
       "type": "component",
       "repeatable": false,
       "component": "shared.key-service",
       "required": true
     },
-    "all_service_section": {
+    "section_break_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-break-cta",
+      "required": true
+    },
+    "other_services": {
       "type": "component",
       "repeatable": false,
       "component": "shared.all-service-section",
@@ -63,7 +69,8 @@
     "report_graph": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.report-graph"
+      "component": "shared.report-graph",
+      "required": true
     },
     "faq_section": {
       "type": "component",

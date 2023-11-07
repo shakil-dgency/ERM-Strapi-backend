@@ -18,13 +18,14 @@ export interface PriceServiceItem extends Schema.Component {
 export interface SharedAllServiceSection extends Schema.Component {
   collectionName: 'components_shared_all_service_sections';
   info: {
-    displayName: 'All Service Section';
+    displayName: 'Other Services';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    all_service_card: Attribute.Component<'usp.all-service-card', true> &
+    other_services_card: Attribute.Component<'usp.all-service-card', true> &
       Attribute.Required;
   };
 }
@@ -118,7 +119,7 @@ export interface SharedFooterTopCta extends Schema.Component {
 export interface SharedKeyService extends Schema.Component {
   collectionName: 'components_shared_key_services';
   info: {
-    displayName: 'Key Service';
+    displayName: 'Choose How You Work';
     description: '';
   };
   attributes: {
@@ -182,6 +183,18 @@ export interface SharedReportGraph extends Schema.Component {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface SharedSectionBreakCta extends Schema.Component {
+  collectionName: 'components_shared_section_break_ctas';
+  info: {
+    displayName: 'Section Break cta';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    cta: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -261,7 +274,8 @@ export interface SharedTestimonialCarousel extends Schema.Component {
 export interface UspAllServiceCard extends Schema.Component {
   collectionName: 'components_usp_all_service_cards';
   info: {
-    displayName: 'All Service Card';
+    displayName: 'Other Services Card';
+    description: '';
   };
   attributes: {
     card_title: Attribute.String & Attribute.Required;
@@ -299,7 +313,8 @@ export interface UspFaqQuestionAndAnswer extends Schema.Component {
 export interface UspKeyServiceCard extends Schema.Component {
   collectionName: 'components_usp_key_service_cards';
   info: {
-    displayName: 'Key Service Card';
+    displayName: 'Choose How You Work Card';
+    description: '';
   };
   attributes: {
     card_title: Attribute.String & Attribute.Required;
@@ -359,6 +374,7 @@ declare module '@strapi/types' {
       'shared.list-of-service': SharedListOfService;
       'shared.meta-social': SharedMetaSocial;
       'shared.report-graph': SharedReportGraph;
+      'shared.section-break-cta': SharedSectionBreakCta;
       'shared.seo': SharedSeo;
       'shared.service-hero': SharedServiceHero;
       'shared.service-usp-section': SharedServiceUspSection;

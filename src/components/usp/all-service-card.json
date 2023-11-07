@@ -1,7 +1,8 @@
 {
   "collectionName": "components_usp_all_service_cards",
   "info": {
-    "displayName": "All Service Card"
+    "displayName": "Other Services Card",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,12 +15,12 @@
       "required": true
     },
     "card_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

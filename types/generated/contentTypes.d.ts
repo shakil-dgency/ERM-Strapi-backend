@@ -733,12 +733,16 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
       Attribute.Required;
     list_of_service: Attribute.Component<'shared.list-of-service'> &
       Attribute.Required;
-    key_service: Attribute.Component<'shared.key-service'> & Attribute.Required;
-    all_service_section: Attribute.Component<'shared.all-service-section'> &
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
       Attribute.Required;
     dedicated_team: Attribute.Component<'shared.dedicated-team'> &
       Attribute.Required;
-    report_graph: Attribute.Component<'shared.report-graph'>;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
     faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
     testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
       Attribute.Required;
