@@ -766,6 +766,60 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
   };
 }
 
+export interface ApiMicrosoftAdMicrosoftAd extends Schema.SingleType {
+  collectionName: 'microsoft_ads';
+  info: {
+    singularName: 'microsoft-ad';
+    pluralName: 'microsoft-ads';
+    displayName: 'Microsoft Ads';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::microsoft-ad.microsoft-ad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::microsoft-ad.microsoft-ad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPricePrice extends Schema.CollectionType {
   collectionName: 'prices';
   info: {
@@ -873,6 +927,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
+      'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
     }
