@@ -1,0 +1,92 @@
+{
+  "kind": "singleType",
+  "collectionName": "linked_in_ads",
+  "info": {
+    "singularName": "linked-in-ad",
+    "pluralName": "linked-in-ads",
+    "displayName": "LinkedIn Ads"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-hero",
+      "required": true
+    },
+    "usp_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-usp-section",
+      "required": true
+    },
+    "cro_opportunities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cro-opportunities",
+      "required": true
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section",
+      "required": true
+    },
+    "list_of_service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.list-of-service",
+      "required": true
+    },
+    "choose_how_you_work": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.key-service"
+    },
+    "section_break_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-break-cta",
+      "required": true
+    },
+    "other_services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.all-service-section",
+      "required": true
+    },
+    "dedicated_team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.dedicated-team",
+      "required": true
+    },
+    "report_graph": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.report-graph",
+      "required": true
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.faq-section",
+      "required": true
+    },
+    "testimonial_carousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial-carousel",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

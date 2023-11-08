@@ -712,6 +712,59 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiFacebookAndInstagramAdFacebookAndInstagramAd
+  extends Schema.SingleType {
+  collectionName: 'facebook_and_instagram_ads';
+  info: {
+    singularName: 'facebook-and-instagram-ad';
+    pluralName: 'facebook-and-instagram-ads';
+    displayName: 'Facebook and Instagram Ads';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'>;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'>;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::facebook-and-instagram-ad.facebook-and-instagram-ad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::facebook-and-instagram-ad.facebook-and-instagram-ad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
   collectionName: 'google_ads_agencies';
   info: {
@@ -759,6 +812,58 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::google-ads-agency.google-ads-agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLinkedInAdLinkedInAd extends Schema.SingleType {
+  collectionName: 'linked_in_ads';
+  info: {
+    singularName: 'linked-in-ad';
+    pluralName: 'linked-in-ads';
+    displayName: 'LinkedIn Ads';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'>;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::linked-in-ad.linked-in-ad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::linked-in-ad.linked-in-ad',
       'oneToOne',
       'admin::user'
     > &
@@ -909,6 +1014,112 @@ export interface ApiPricePageInformationPricePageInformation
   };
 }
 
+export interface ApiSearchEngineOptimizationSearchEngineOptimization
+  extends Schema.SingleType {
+  collectionName: 'search_engine_optimizations';
+  info: {
+    singularName: 'search-engine-optimization';
+    pluralName: 'search-engine-optimizations';
+    displayName: ' Search Engine Optimization (SEO)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'>;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::search-engine-optimization.search-engine-optimization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::search-engine-optimization.search-engine-optimization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSocialMediaManagementSocialMediaManagement
+  extends Schema.SingleType {
+  collectionName: 'social_media_managements';
+  info: {
+    singularName: 'social-media-management';
+    pluralName: 'social-media-managements';
+    displayName: 'Social Media Management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'>;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'>;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-media-management.social-media-management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-media-management.social-media-management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -926,10 +1137,14 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
+      'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
+      'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
+      'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
     }
   }
 }
