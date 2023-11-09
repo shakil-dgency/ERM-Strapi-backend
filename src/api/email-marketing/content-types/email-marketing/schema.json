@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_marketings",
+  "info": {
+    "singularName": "email-marketing",
+    "pluralName": "email-marketings",
+    "displayName": "Email Marketing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-hero",
+      "required": true
+    },
+    "usp_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-usp-section",
+      "required": true
+    },
+    "cro_opportunities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cro-opportunities",
+      "required": true
+    }
+  }
+}

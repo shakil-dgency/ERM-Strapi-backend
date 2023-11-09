@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_email_to_customers",
+  "info": {
+    "displayName": "Email To Customer"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "card_title1": {
+      "type": "string",
+      "required": true
+    },
+    "card_title2": {
+      "type": "string",
+      "required": true
+    },
+    "card_description1": {
+      "type": "text",
+      "required": true
+    },
+    "card_description2": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

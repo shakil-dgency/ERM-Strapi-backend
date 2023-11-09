@@ -83,6 +83,22 @@ export interface SharedDedicatedTeam extends Schema.Component {
   };
 }
 
+export interface SharedEmailToCustomer extends Schema.Component {
+  collectionName: 'components_shared_email_to_customers';
+  info: {
+    displayName: 'Email To Customer';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    card_title1: Attribute.String & Attribute.Required;
+    card_title2: Attribute.String & Attribute.Required;
+    card_description1: Attribute.Text & Attribute.Required;
+    card_description2: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface SharedFaqSection extends Schema.Component {
   collectionName: 'components_shared_faq_sections';
   info: {
@@ -148,6 +164,20 @@ export interface SharedListOfService extends Schema.Component {
       Attribute.Required;
     list_right: Attribute.Component<'usp.service-list', true> &
       Attribute.Required;
+  };
+}
+
+export interface SharedMaintainEmailHealth extends Schema.Component {
+  collectionName: 'components_shared_maintain_email_healths';
+  info: {
+    displayName: 'Maintain Email Health';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    card_title: Attribute.String & Attribute.Required;
+    card_description: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -368,10 +398,12 @@ declare module '@strapi/types' {
       'shared.case-study-section': SharedCaseStudySection;
       'shared.cro-opportunities': SharedCroOpportunities;
       'shared.dedicated-team': SharedDedicatedTeam;
+      'shared.email-to-customer': SharedEmailToCustomer;
       'shared.faq-section': SharedFaqSection;
       'shared.footer-top-cta': SharedFooterTopCta;
       'shared.key-service': SharedKeyService;
       'shared.list-of-service': SharedListOfService;
+      'shared.maintain-email-health': SharedMaintainEmailHealth;
       'shared.meta-social': SharedMetaSocial;
       'shared.report-graph': SharedReportGraph;
       'shared.section-break-cta': SharedSectionBreakCta;

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_maintain_email_healths",
+  "info": {
+    "displayName": "Maintain Email Health"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "card_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

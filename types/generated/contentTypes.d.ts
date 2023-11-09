@@ -712,6 +712,40 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
+  collectionName: 'email_marketings';
+  info: {
+    singularName: 'email-marketing';
+    pluralName: 'email-marketings';
+    displayName: 'Email Marketing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::email-marketing.email-marketing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::email-marketing.email-marketing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFacebookAndInstagramAdFacebookAndInstagramAd
   extends Schema.SingleType {
   collectionName: 'facebook_and_instagram_ads';
@@ -812,6 +846,61 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::google-ads-agency.google-ads-agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageDevelopmentLandingPageDevelopment
+  extends Schema.SingleType {
+  collectionName: 'landing_page_developments';
+  info: {
+    singularName: 'landing-page-development';
+    pluralName: 'landing-page-developments';
+    displayName: 'Landing page Development';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::landing-page-development.landing-page-development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::landing-page-development.landing-page-development',
       'oneToOne',
       'admin::user'
     > &
@@ -1120,6 +1209,58 @@ export interface ApiSocialMediaManagementSocialMediaManagement
   };
 }
 
+export interface ApiWebsiteDevelopmentWebsiteDevelopment
+  extends Schema.SingleType {
+  collectionName: 'website_developments';
+  info: {
+    singularName: 'website-development';
+    pluralName: 'website-developments';
+    displayName: 'Website Development';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    usp_section: Attribute.Component<'shared.service-usp-section'> &
+      Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::website-development.website-development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::website-development.website-development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1137,14 +1278,17 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::email-marketing.email-marketing': ApiEmailMarketingEmailMarketing;
       'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
+      'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
       'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
       'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
+      'api::website-development.website-development': ApiWebsiteDevelopmentWebsiteDevelopment;
     }
   }
 }
