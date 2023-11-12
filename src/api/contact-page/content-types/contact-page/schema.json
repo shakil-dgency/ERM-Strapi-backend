@@ -28,6 +28,10 @@
       "repeatable": false,
       "component": "shared.footer-top-cta",
       "required": true
+    },
+    "contact_card_title": {
+      "type": "string",
+      "required": true
     }
   }
 }

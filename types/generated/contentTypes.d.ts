@@ -868,6 +868,7 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     description: Attribute.Text & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    contact_card_title: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
