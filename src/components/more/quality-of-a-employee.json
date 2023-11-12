@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_more_quality_of_a_employees",
+  "info": {
+    "displayName": "Quality Of a Employee"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "employee_quality_card": {
+      "displayName": "Employee Quality Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.employee-quality-card",
+      "required": true
+    }
+  }
+}

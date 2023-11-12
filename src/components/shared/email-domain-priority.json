@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_case_study_sections",
+  "collectionName": "components_shared_email_domain_priorities",
   "info": {
-    "displayName": "Case Study Section",
-    "description": ""
+    "displayName": "Email Domain Priority"
   },
   "options": {},
   "attributes": {
@@ -11,15 +10,18 @@
       "required": true
     },
     "title_second_line": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "descriptive_cta": {
+    "card_title": {
       "type": "string",
+      "required": true
+    },
+    "card_description": {
+      "type": "text",
       "required": true
     }
   }

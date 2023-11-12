@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.other-hero",
+      "required": true
+    },
+    "portfolio": {
+      "displayName": "Portfolio",
+      "type": "component",
+      "repeatable": false,
+      "component": "more.portfolio",
+      "required": true
+    },
+    "why_choose_us": {
+      "displayName": "Why Choose Us",
+      "type": "component",
+      "repeatable": false,
+      "component": "more.why-choose-us",
+      "required": true
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

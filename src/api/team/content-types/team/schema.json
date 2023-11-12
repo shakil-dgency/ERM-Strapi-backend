@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.other-hero",
+      "required": true
+    },
+    "team_member": {
+      "displayName": "Team Member",
+      "type": "component",
+      "repeatable": false,
+      "component": "more.team-member",
+      "required": true
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

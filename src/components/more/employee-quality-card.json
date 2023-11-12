@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_more_employee_quality_cards",
+  "info": {
+    "displayName": "Employee Quality Card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_works",
+  "info": {
+    "singularName": "our-work",
+    "pluralName": "our-works",
+    "displayName": "Our Works"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.other-hero",
+      "required": true
+    },
+    "works": {
+      "displayName": "Our Works Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-works.our-works-section",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

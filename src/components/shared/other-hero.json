@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_other_heroes",
+  "info": {
+    "displayName": "Other Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    }
+  }
+}

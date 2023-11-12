@@ -677,6 +677,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    portfolio: Attribute.Component<'more.portfolio'> & Attribute.Required;
+    why_choose_us: Attribute.Component<'more.why-choose-us'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -712,12 +750,114 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCareerCareer extends Schema.SingleType {
+  collectionName: 'careers';
+  info: {
+    singularName: 'career';
+    pluralName: 'careers';
+    displayName: 'Career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    employee_quality: Attribute.Component<'more.quality-of-a-employee'> &
+      Attribute.Required;
+    job_post: Attribute.Component<'more.job-post'> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudiesPageCaseStudiesPage extends Schema.SingleType {
+  collectionName: 'case_studies_pages';
+  info: {
+    singularName: 'case-studies-page';
+    pluralName: 'case-studies-pages';
+    displayName: 'Case Studies Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-studies-page.case-studies-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-studies-page.case-studies-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
+  collectionName: 'case_studies';
+  info: {
+    singularName: 'case-study';
+    pluralName: 'case-studies';
+    displayName: 'Case Studies';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    case_category: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::case-study.case-study', 'title'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
   collectionName: 'email_marketings';
   info: {
     singularName: 'email-marketing';
     pluralName: 'email-marketings';
     displayName: 'Email Marketing';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -727,6 +867,29 @@ export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
     usp_section: Attribute.Component<'shared.service-usp-section'> &
       Attribute.Required;
     cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    content_types: Attribute.Component<'shared.content-types'> &
+      Attribute.Required;
+    list_of_service: Attribute.Component<'shared.list-of-service'> &
+      Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    customer_handling_email: Attribute.Component<'shared.customer-handling-email'> &
+      Attribute.Required;
+    email_domain_priority: Attribute.Component<'shared.email-domain-priority'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    section_break_cta: Attribute.Component<'shared.section-break-cta'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    report_graph: Attribute.Component<'shared.report-graph'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -795,6 +958,37 @@ export interface ApiFacebookAndInstagramAdFacebookAndInstagramAd
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Schema.SingleType {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'Faqs';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    faq_section1: Attribute.Component<'usp.faq-question-and-answer', true> &
+      Attribute.Required;
+    faq_section2: Attribute.Component<'usp.faq-question-and-answer', true> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1014,6 +1208,40 @@ export interface ApiMicrosoftAdMicrosoftAd extends Schema.SingleType {
   };
 }
 
+export interface ApiOurWorkOurWork extends Schema.SingleType {
+  collectionName: 'our_works';
+  info: {
+    singularName: 'our-work';
+    pluralName: 'our-works';
+    displayName: 'Our Works';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    works: Attribute.Component<'our-works.our-works-section'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-work.our-work',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-work.our-work',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPricePrice extends Schema.CollectionType {
   collectionName: 'prices';
   info: {
@@ -1110,6 +1338,7 @@ export interface ApiSearchEngineOptimizationSearchEngineOptimization
     singularName: 'search-engine-optimization';
     pluralName: 'search-engine-optimizations';
     displayName: ' Search Engine Optimization (SEO)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1138,6 +1367,8 @@ export interface ApiSearchEngineOptimizationSearchEngineOptimization
     testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    content_types: Attribute.Component<'shared.content-types'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1202,6 +1433,68 @@ export interface ApiSocialMediaManagementSocialMediaManagement
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::social-media-management.social-media-management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTeamTeam extends Schema.SingleType {
+  collectionName: 'teams';
+  info: {
+    singularName: 'team';
+    pluralName: 'teams';
+    displayName: 'Team';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    team_member: Attribute.Component<'more.team-member'> & Attribute.Required;
+    casestudy_section: Attribute.Component<'shared.case-study-section'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTestimonialTestimonial extends Schema.SingleType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonials';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
+    testimonials: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
       'oneToOne',
       'admin::user'
     > &
@@ -1277,17 +1570,25 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about.about': ApiAboutAbout;
       'api::blog.blog': ApiBlogBlog;
+      'api::career.career': ApiCareerCareer;
+      'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
+      'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::email-marketing.email-marketing': ApiEmailMarketingEmailMarketing;
       'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
+      'api::faq.faq': ApiFaqFaq;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
       'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
+      'api::our-work.our-work': ApiOurWorkOurWork;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
       'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
       'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
+      'api::team.team': ApiTeamTeam;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::website-development.website-development': ApiWebsiteDevelopmentWebsiteDevelopment;
     }
   }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "email-marketing",
     "pluralName": "email-marketings",
-    "displayName": "Email Marketing"
+    "displayName": "Email Marketing",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,78 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.cro-opportunities",
+      "required": true
+    },
+    "content_types": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.content-types",
+      "required": true
+    },
+    "list_of_service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.list-of-service",
+      "required": true
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section",
+      "required": true
+    },
+    "customer_handling_email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.customer-handling-email",
+      "required": true
+    },
+    "email_domain_priority": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.email-domain-priority",
+      "required": true
+    },
+    "choose_how_you_work": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.key-service",
+      "required": true
+    },
+    "section_break_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-break-cta",
+      "required": true
+    },
+    "other_services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.all-service-section",
+      "required": true
+    },
+    "dedicated_team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.dedicated-team",
+      "required": true
+    },
+    "report_graph": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.report-graph",
+      "required": true
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.faq-section",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
       "required": true
     }
   }

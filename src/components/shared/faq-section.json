@@ -6,10 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "title_first_line": {
-      "type": "string",
-      "required": true
-    },
     "title_second_line": {
       "type": "string"
     },
@@ -25,6 +21,10 @@
       "required": true
     },
     "descriptive_cta": {
+      "type": "string",
+      "required": true
+    },
+    "title_first_line": {
       "type": "string",
       "required": true
     }

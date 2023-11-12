@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_more_team_members",
+  "info": {
+    "displayName": "Team Member"
+  },
+  "options": {},
+  "attributes": {
+    "single_member": {
+      "displayName": "Single member",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.single-member",
+      "required": false
+    }
+  }
+}

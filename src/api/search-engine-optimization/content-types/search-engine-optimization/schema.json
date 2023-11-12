@@ -4,7 +4,8 @@
   "info": {
     "singularName": "search-engine-optimization",
     "pluralName": "search-engine-optimizations",
-    "displayName": " Search Engine Optimization (SEO)"
+    "displayName": " Search Engine Optimization (SEO)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -86,6 +87,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.footer-top-cta",
+      "required": true
+    },
+    "content_types": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.content-types",
       "required": true
     }
   }

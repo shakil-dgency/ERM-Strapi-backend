@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.other-hero",
+      "required": true
+    },
+    "employee_quality": {
+      "displayName": "Quality Of a Employee",
+      "type": "component",
+      "repeatable": false,
+      "component": "more.quality-of-a-employee",
+      "required": true
+    },
+    "job_post": {
+      "displayName": "Job Post",
+      "type": "component",
+      "repeatable": false,
+      "component": "more.job-post",
+      "required": true
+    }
+  }
+}

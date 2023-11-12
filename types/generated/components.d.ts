@@ -1,5 +1,145 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MoreEmployeeQualityCard extends Schema.Component {
+  collectionName: 'components_more_employee_quality_cards';
+  info: {
+    displayName: 'Employee Quality Card';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface MoreJobPostCard extends Schema.Component {
+  collectionName: 'components_more_job_post_cards';
+  info: {
+    displayName: 'Job Post Card';
+  };
+  attributes: {
+    job_title: Attribute.String & Attribute.Required;
+    short_description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface MoreJobPost extends Schema.Component {
+  collectionName: 'components_more_job_posts';
+  info: {
+    displayName: 'Job Post';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    job_post_card: Attribute.Component<'more.job-post-card', true> &
+      Attribute.Required;
+  };
+}
+
+export interface MorePortfolio extends Schema.Component {
+  collectionName: 'components_more_portfolios';
+  info: {
+    displayName: 'Portfolio';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    portfolio1: Attribute.Text;
+    portfolio2: Attribute.Text;
+    portfolio3: Attribute.Text;
+    portfolio4: Attribute.Text;
+  };
+}
+
+export interface MoreQualityOfAEmployee extends Schema.Component {
+  collectionName: 'components_more_quality_of_a_employees';
+  info: {
+    displayName: 'Quality Of a Employee';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    employee_quality_card: Attribute.Component<
+      'more.employee-quality-card',
+      true
+    > &
+      Attribute.Required;
+  };
+}
+
+export interface MoreSingleMember extends Schema.Component {
+  collectionName: 'components_more_single_members';
+  info: {
+    displayName: 'Single member';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    position: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    italic_short_quote: Attribute.String & Attribute.Required;
+    strength: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    weakness: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+  };
+}
+
+export interface MoreTeamMember extends Schema.Component {
+  collectionName: 'components_more_team_members';
+  info: {
+    displayName: 'Team Member';
+  };
+  attributes: {
+    single_member: Attribute.Component<'more.single-member', true>;
+  };
+}
+
+export interface MoreWhyChooseUs extends Schema.Component {
+  collectionName: 'components_more_why_choose_uses';
+  info: {
+    displayName: 'Why Choose Us';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    card_one_title: Attribute.String & Attribute.Required;
+    card_two_title: Attribute.String & Attribute.Required;
+    card_three_title: Attribute.String & Attribute.Required;
+    card_one_description: Attribute.Text & Attribute.Required;
+    card_two_description: Attribute.Text & Attribute.Required;
+    card_three_description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface OurWorksOurWorksSection extends Schema.Component {
+  collectionName: 'components_our_works_our_works_sections';
+  info: {
+    displayName: 'Our Works Section';
+  };
+  attributes: {
+    website_section_title: Attribute.String & Attribute.Required;
+    website_section_description: Attribute.Text & Attribute.Required;
+    Website_images: Attribute.Media & Attribute.Required;
+    ads_section_title: Attribute.String & Attribute.Required;
+    ads_section_description: Attribute.Text & Attribute.Required;
+    ads_images: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface PriceServiceItem extends Schema.Component {
   collectionName: 'components_price_service_items';
   info: {
@@ -40,9 +180,19 @@ export interface SharedCaseStudySection extends Schema.Component {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    casestudy_card: Attribute.Component<'usp.case-study-card', true> &
-      Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface SharedContentTypes extends Schema.Component {
+  collectionName: 'components_shared_content_types';
+  info: {
+    displayName: 'Content Types';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -69,6 +219,22 @@ export interface SharedCroOpportunities extends Schema.Component {
   };
 }
 
+export interface SharedCustomerHandlingEmail extends Schema.Component {
+  collectionName: 'components_shared_customer_handling_emails';
+  info: {
+    displayName: 'Customer Handling Email';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    card_title1: Attribute.String & Attribute.Required;
+    card_title2: Attribute.String & Attribute.Required;
+    card_description1: Attribute.Text & Attribute.Required;
+    card_description2: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface SharedDedicatedTeam extends Schema.Component {
   collectionName: 'components_shared_dedicated_teams';
   info: {
@@ -80,6 +246,20 @@ export interface SharedDedicatedTeam extends Schema.Component {
     description: Attribute.Text & Attribute.Required;
     team_image: Attribute.Media & Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface SharedEmailDomainPriority extends Schema.Component {
+  collectionName: 'components_shared_email_domain_priorities';
+  info: {
+    displayName: 'Email Domain Priority';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    card_title: Attribute.String & Attribute.Required;
+    card_description: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -106,7 +286,6 @@ export interface SharedFaqSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
     question_and_answer: Attribute.Component<
@@ -115,6 +294,7 @@ export interface SharedFaqSection extends Schema.Component {
     > &
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    title_first_line: Attribute.String & Attribute.Required;
   };
 }
 
@@ -201,6 +381,17 @@ export interface SharedMetaSocial extends Schema.Component {
         maxLength: 65;
       }>;
     image: Attribute.Media;
+  };
+}
+
+export interface SharedOtherHero extends Schema.Component {
+  collectionName: 'components_shared_other_heroes';
+  info: {
+    displayName: 'Other Hero';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
   };
 }
 
@@ -393,11 +584,23 @@ export interface UspUspCard extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'more.employee-quality-card': MoreEmployeeQualityCard;
+      'more.job-post-card': MoreJobPostCard;
+      'more.job-post': MoreJobPost;
+      'more.portfolio': MorePortfolio;
+      'more.quality-of-a-employee': MoreQualityOfAEmployee;
+      'more.single-member': MoreSingleMember;
+      'more.team-member': MoreTeamMember;
+      'more.why-choose-us': MoreWhyChooseUs;
+      'our-works.our-works-section': OurWorksOurWorksSection;
       'price.service-item': PriceServiceItem;
       'shared.all-service-section': SharedAllServiceSection;
       'shared.case-study-section': SharedCaseStudySection;
+      'shared.content-types': SharedContentTypes;
       'shared.cro-opportunities': SharedCroOpportunities;
+      'shared.customer-handling-email': SharedCustomerHandlingEmail;
       'shared.dedicated-team': SharedDedicatedTeam;
+      'shared.email-domain-priority': SharedEmailDomainPriority;
       'shared.email-to-customer': SharedEmailToCustomer;
       'shared.faq-section': SharedFaqSection;
       'shared.footer-top-cta': SharedFooterTopCta;
@@ -405,6 +608,7 @@ declare module '@strapi/types' {
       'shared.list-of-service': SharedListOfService;
       'shared.maintain-email-health': SharedMaintainEmailHealth;
       'shared.meta-social': SharedMetaSocial;
+      'shared.other-hero': SharedOtherHero;
       'shared.report-graph': SharedReportGraph;
       'shared.section-break-cta': SharedSectionBreakCta;
       'shared.seo': SharedSeo;

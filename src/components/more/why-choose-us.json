@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_more_why_choose_uses",
+  "info": {
+    "displayName": "Why Choose Us"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "card_one_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_two_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_three_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_one_description": {
+      "type": "text",
+      "required": true
+    },
+    "card_two_description": {
+      "type": "text",
+      "required": true
+    },
+    "card_three_description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

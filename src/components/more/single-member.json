@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_more_single_members",
+  "info": {
+    "displayName": "Single member"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "italic_short_quote": {
+      "type": "string",
+      "required": true
+    },
+    "strength": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "weakness": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

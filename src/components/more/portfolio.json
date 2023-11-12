@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_case_study_sections",
+  "collectionName": "components_more_portfolios",
   "info": {
-    "displayName": "Case Study Section",
-    "description": ""
+    "displayName": "Portfolio"
   },
   "options": {},
   "attributes": {
@@ -18,9 +17,17 @@
       "type": "text",
       "required": true
     },
-    "descriptive_cta": {
-      "type": "string",
-      "required": true
+    "portfolio1": {
+      "type": "text"
+    },
+    "portfolio2": {
+      "type": "text"
+    },
+    "portfolio3": {
+      "type": "text"
+    },
+    "portfolio4": {
+      "type": "text"
     }
   }
 }

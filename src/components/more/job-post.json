@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_more_job_posts",
+  "info": {
+    "displayName": "Job Post"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "job_post_card": {
+      "displayName": "Job Post Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.job-post-card",
+      "required": true
+    }
+  }
+}
