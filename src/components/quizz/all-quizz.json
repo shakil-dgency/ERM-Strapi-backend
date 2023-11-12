@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_quizz_all_quizzes",
+  "info": {
+    "displayName": "All Quizz"
+  },
+  "options": {},
+  "attributes": {
+    "quizz_item": {
+      "displayName": "Single Quizz",
+      "type": "component",
+      "repeatable": true,
+      "component": "quizz.single-quizz",
+      "required": true
+    }
+  }
+}

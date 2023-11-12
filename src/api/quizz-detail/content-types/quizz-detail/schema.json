@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizz_details",
+  "info": {
+    "singularName": "quizz-detail",
+    "pluralName": "quizz-details",
+    "displayName": "Quizz Details",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "hero_title_second_line": {
+      "type": "string"
+    },
+    "quizz_title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "quizz_title",
+      "required": true
+    },
+    "quizz_tag": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "string",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

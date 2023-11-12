@@ -155,6 +155,29 @@ export interface PriceServiceItem extends Schema.Component {
   };
 }
 
+export interface QuizzAllQuizz extends Schema.Component {
+  collectionName: 'components_quizz_all_quizzes';
+  info: {
+    displayName: 'All Quizz';
+  };
+  attributes: {
+    quizz_item: Attribute.Component<'quizz.single-quizz', true> &
+      Attribute.Required;
+  };
+}
+
+export interface QuizzSingleQuizz extends Schema.Component {
+  collectionName: 'components_quizz_single_quizzes';
+  info: {
+    displayName: 'Single Quizz';
+  };
+  attributes: {
+    quizz_tag: Attribute.String & Attribute.Required;
+    quizz_title: Attribute.String & Attribute.Required;
+    short_description: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedAllServiceSection extends Schema.Component {
   collectionName: 'components_shared_all_service_sections';
   info: {
@@ -594,6 +617,8 @@ declare module '@strapi/types' {
       'more.why-choose-us': MoreWhyChooseUs;
       'our-works.our-works-section': OurWorksOurWorksSection;
       'price.service-item': PriceServiceItem;
+      'quizz.all-quizz': QuizzAllQuizz;
+      'quizz.single-quizz': QuizzSingleQuizz;
       'shared.all-service-section': SharedAllServiceSection;
       'shared.case-study-section': SharedCaseStudySection;
       'shared.content-types': SharedContentTypes;

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_quizz_single_quizzes",
+  "info": {
+    "displayName": "Single Quizz"
+  },
+  "options": {},
+  "attributes": {
+    "quizz_tag": {
+      "type": "string",
+      "required": true
+    },
+    "quizz_title": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

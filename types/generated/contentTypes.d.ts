@@ -851,6 +851,41 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactPageContactPage extends Schema.SingleType {
+  collectionName: 'contact_pages';
+  info: {
+    singularName: 'contact-page';
+    pluralName: 'contact-pages';
+    displayName: 'Contact Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    contact_form_title: Attribute.String & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
   collectionName: 'email_marketings';
   info: {
@@ -1331,6 +1366,80 @@ export interface ApiPricePageInformationPricePageInformation
   };
 }
 
+export interface ApiQuizzQuizz extends Schema.SingleType {
+  collectionName: 'quizzes';
+  info: {
+    singularName: 'quizz';
+    pluralName: 'quizzes';
+    displayName: 'Quizzes';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quizz.quizz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quizz.quizz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
+  collectionName: 'quizz_details';
+  info: {
+    singularName: 'quizz-detail';
+    pluralName: 'quizz-details';
+    displayName: 'Quizz Details';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    quizz_title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::quizz-detail.quizz-detail', 'quizz_title'> &
+      Attribute.Required;
+    quizz_tag: Attribute.String & Attribute.Required;
+    short_description: Attribute.String & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quizz-detail.quizz-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quizz-detail.quizz-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSearchEngineOptimizationSearchEngineOptimization
   extends Schema.SingleType {
   collectionName: 'search_engine_optimizations';
@@ -1575,6 +1684,7 @@ declare module '@strapi/types' {
       'api::career.career': ApiCareerCareer;
       'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::email-marketing.email-marketing': ApiEmailMarketingEmailMarketing;
       'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
       'api::faq.faq': ApiFaqFaq;
@@ -1585,6 +1695,8 @@ declare module '@strapi/types' {
       'api::our-work.our-work': ApiOurWorkOurWork;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
+      'api::quizz.quizz': ApiQuizzQuizz;
+      'api::quizz-detail.quizz-detail': ApiQuizzDetailQuizzDetail;
       'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
       'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
       'api::team.team': ApiTeamTeam;
