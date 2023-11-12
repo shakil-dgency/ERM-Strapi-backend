@@ -857,6 +857,7 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     singularName: 'contact-page';
     pluralName: 'contact-pages';
     displayName: 'Contact Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -865,7 +866,6 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     hero_title_first_line: Attribute.String & Attribute.Required;
     hero_title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    contact_form_title: Attribute.String & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;

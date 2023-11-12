@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-page",
     "pluralName": "contact-pages",
-    "displayName": "Contact Page"
+    "displayName": "Contact Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,10 +21,6 @@
     },
     "description": {
       "type": "text",
-      "required": true
-    },
-    "contact_form_title": {
-      "type": "string",
       "required": true
     },
     "footer_top_cta": {
