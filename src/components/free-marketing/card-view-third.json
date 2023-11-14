@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_free_marketing_card_view_thirds",
+  "info": {
+    "displayName": "Card View Third"
+  },
+  "options": {},
+  "attributes": {
+    "card_title": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    }
+  }
+}

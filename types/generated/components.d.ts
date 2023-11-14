@@ -1,5 +1,133 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface FreeMarketingCardViewFirst extends Schema.Component {
+  collectionName: 'components_free_marketing_card_view_firsts';
+  info: {
+    displayName: 'Card View First';
+  };
+  attributes: {
+    service1: Attribute.String;
+    service2: Attribute.String;
+    service3: Attribute.String;
+    service4: Attribute.String;
+    service5: Attribute.String;
+    service6: Attribute.String;
+    service7: Attribute.String;
+    card_title: Attribute.String;
+  };
+}
+
+export interface FreeMarketingCardViewSecond extends Schema.Component {
+  collectionName: 'components_free_marketing_card_view_seconds';
+  info: {
+    displayName: 'Card View Second';
+  };
+  attributes: {
+    goal_1: Attribute.String;
+    goal_2: Attribute.String;
+    goal_3: Attribute.String;
+    goal_4: Attribute.String;
+    goal_5: Attribute.String;
+    card_title: Attribute.String;
+  };
+}
+
+export interface FreeMarketingCardViewThird extends Schema.Component {
+  collectionName: 'components_free_marketing_card_view_thirds';
+  info: {
+    displayName: 'Card View Third';
+  };
+  attributes: {
+    card_title: Attribute.String;
+    phone_number: Attribute.String;
+  };
+}
+
+export interface FreeMarketingFreeMarketingHeroCard extends Schema.Component {
+  collectionName: 'components_free_marketing_free_marketing_hero_cards';
+  info: {
+    displayName: 'Free Marketing Hero Card';
+  };
+  attributes: {
+    card_view_first: Attribute.Component<'free-marketing.card-view-first'> &
+      Attribute.Required;
+    card_view_second: Attribute.Component<'free-marketing.card-view-second'>;
+    card_view_third: Attribute.Component<'free-marketing.card-view-third'>;
+  };
+}
+
+export interface FreeMarketingMarketingPlanCard extends Schema.Component {
+  collectionName: 'components_free_marketing_marketing_plan_cards';
+  info: {
+    displayName: 'Marketing Plan Card';
+  };
+  attributes: {
+    card_title: Attribute.String & Attribute.Required;
+    card_description: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface FreeMarketingMarketingPlan extends Schema.Component {
+  collectionName: 'components_free_marketing_marketing_plans';
+  info: {
+    displayName: 'Marketing Plan';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    marketing_card: Attribute.Component<
+      'free-marketing.marketing-plan-card',
+      true
+    > &
+      Attribute.Required;
+  };
+}
+
+export interface FreeMarketingMarketingStrategy extends Schema.Component {
+  collectionName: 'components_free_marketing_marketing_strategies';
+  info: {
+    displayName: 'Marketing Strategy';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    marketing_plan_card: Attribute.Component<
+      'free-marketing.marketing-plan-card',
+      true
+    >;
+  };
+}
+
+export interface FreeMarketingTestimonial extends Schema.Component {
+  collectionName: 'components_free_marketing_testimonials';
+  info: {
+    displayName: 'Testimonial';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    testimonial_card: Attribute.Component<'usp.testimonial-card', true> &
+      Attribute.Required;
+  };
+}
+
+export interface FreeMarketingVideoSection extends Schema.Component {
+  collectionName: 'components_free_marketing_video_sections';
+  info: {
+    displayName: 'Video Section';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    video_url: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface MoreEmployeeQualityCard extends Schema.Component {
   collectionName: 'components_more_employee_quality_cards';
   info: {
@@ -607,6 +735,15 @@ export interface UspUspCard extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'free-marketing.card-view-first': FreeMarketingCardViewFirst;
+      'free-marketing.card-view-second': FreeMarketingCardViewSecond;
+      'free-marketing.card-view-third': FreeMarketingCardViewThird;
+      'free-marketing.free-marketing-hero-card': FreeMarketingFreeMarketingHeroCard;
+      'free-marketing.marketing-plan-card': FreeMarketingMarketingPlanCard;
+      'free-marketing.marketing-plan': FreeMarketingMarketingPlan;
+      'free-marketing.marketing-strategy': FreeMarketingMarketingStrategy;
+      'free-marketing.testimonial': FreeMarketingTestimonial;
+      'free-marketing.video-section': FreeMarketingVideoSection;
       'more.employee-quality-card': MoreEmployeeQualityCard;
       'more.job-post-card': MoreJobPostCard;
       'more.job-post': MoreJobPost;

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_free_marketing_testimonials",
+  "info": {
+    "displayName": "Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "testimonial_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.testimonial-card",
+      "required": true
+    }
+  }
+}

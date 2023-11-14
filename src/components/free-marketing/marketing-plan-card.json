@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_free_marketing_marketing_plan_cards",
+  "info": {
+    "displayName": "Marketing Plan Card"
+  },
+  "options": {},
+  "attributes": {
+    "card_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_description": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

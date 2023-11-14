@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "free_marketing_plans",
+  "info": {
+    "singularName": "free-marketing-plan",
+    "pluralName": "free-marketing-plans",
+    "displayName": "Free Marketing Plan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "hero_title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "card_view": {
+      "displayName": "Free Marketing Hero Card",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.free-marketing-hero-card",
+      "required": true
+    },
+    "video_section": {
+      "displayName": "Video Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.video-section",
+      "required": true
+    },
+    "marketing_plan": {
+      "displayName": "Marketing Plan",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.marketing-plan",
+      "required": true
+    },
+    "testimonial": {
+      "displayName": "Testimonial",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.testimonial",
+      "required": true
+    },
+    "marketing_strategy": {
+      "displayName": "Marketing Strategy",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.marketing-strategy",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

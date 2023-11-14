@@ -1029,6 +1029,52 @@ export interface ApiFaqFaq extends Schema.SingleType {
   };
 }
 
+export interface ApiFreeMarketingPlanFreeMarketingPlan
+  extends Schema.SingleType {
+  collectionName: 'free_marketing_plans';
+  info: {
+    singularName: 'free-marketing-plan';
+    pluralName: 'free-marketing-plans';
+    displayName: 'Free Marketing Plan';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    card_view: Attribute.Component<'free-marketing.free-marketing-hero-card'> &
+      Attribute.Required;
+    video_section: Attribute.Component<'free-marketing.video-section'> &
+      Attribute.Required;
+    marketing_plan: Attribute.Component<'free-marketing.marketing-plan'> &
+      Attribute.Required;
+    testimonial: Attribute.Component<'free-marketing.testimonial'> &
+      Attribute.Required;
+    marketing_strategy: Attribute.Component<'free-marketing.marketing-strategy'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta', true> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::free-marketing-plan.free-marketing-plan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::free-marketing-plan.free-marketing-plan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
   collectionName: 'google_ads_agencies';
   info: {
@@ -1689,6 +1735,7 @@ declare module '@strapi/types' {
       'api::email-marketing.email-marketing': ApiEmailMarketingEmailMarketing;
       'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
       'api::faq.faq': ApiFaqFaq;
+      'api::free-marketing-plan.free-marketing-plan': ApiFreeMarketingPlanFreeMarketingPlan;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
       'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;

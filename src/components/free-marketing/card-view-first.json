@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_free_marketing_card_view_firsts",
+  "info": {
+    "displayName": "Card View First"
+  },
+  "options": {},
+  "attributes": {
+    "service1": {
+      "type": "string"
+    },
+    "service2": {
+      "type": "string"
+    },
+    "service3": {
+      "type": "string"
+    },
+    "service4": {
+      "type": "string"
+    },
+    "service5": {
+      "type": "string"
+    },
+    "service6": {
+      "type": "string"
+    },
+    "service7": {
+      "type": "string"
+    },
+    "card_title": {
+      "type": "string"
+    }
+  }
+}

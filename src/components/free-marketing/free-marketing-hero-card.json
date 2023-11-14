@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_free_marketing_free_marketing_hero_cards",
+  "info": {
+    "displayName": "Free Marketing Hero Card"
+  },
+  "options": {},
+  "attributes": {
+    "card_view_first": {
+      "displayName": "Card View First",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.card-view-first",
+      "required": true
+    },
+    "card_view_second": {
+      "displayName": "Card View Second",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.card-view-second"
+    },
+    "card_view_third": {
+      "displayName": "Card View Third",
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.card-view-third"
+    }
+  }
+}

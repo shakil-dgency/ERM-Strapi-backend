@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_free_marketing_marketing_strategies",
+  "info": {
+    "displayName": "Marketing Strategy"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "marketing_plan_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "free-marketing.marketing-plan-card"
+    }
+  }
+}

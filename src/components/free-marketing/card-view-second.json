@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_free_marketing_card_view_seconds",
+  "info": {
+    "displayName": "Card View Second"
+  },
+  "options": {},
+  "attributes": {
+    "goal_1": {
+      "type": "string"
+    },
+    "goal_2": {
+      "type": "string"
+    },
+    "goal_3": {
+      "type": "string"
+    },
+    "goal_4": {
+      "type": "string"
+    },
+    "goal_5": {
+      "type": "string"
+    },
+    "card_title": {
+      "type": "string"
+    }
+  }
+}
