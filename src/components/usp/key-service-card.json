@@ -13,6 +13,14 @@
     "short_description": {
       "type": "text",
       "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

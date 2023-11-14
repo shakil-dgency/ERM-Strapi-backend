@@ -691,6 +691,7 @@ export interface UspKeyServiceCard extends Schema.Component {
   attributes: {
     card_title: Attribute.String & Attribute.Required;
     short_description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
   };
 }
 
