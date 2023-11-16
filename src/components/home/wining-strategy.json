@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_home_wining_strategies",
+  "info": {
+    "displayName": "Wining Strategy"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "strategy_1": {
+      "type": "text",
+      "required": true
+    },
+    "strategy_2": {
+      "type": "text",
+      "required": true
+    },
+    "strategy_image_1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "strategy_image_2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

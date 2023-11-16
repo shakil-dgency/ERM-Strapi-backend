@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_our_clients",
+  "info": {
+    "displayName": "Our Clients"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "company_images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "descriptive_cta": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

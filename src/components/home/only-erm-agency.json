@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_home_only_erm_agencies",
+  "info": {
+    "displayName": "Only ERM Agency"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "only_erm_agency_card": {
+      "displayName": "Only ERM Agency Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.only-erm-agency-card",
+      "required": true
+    },
+    "descriptive_cta": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

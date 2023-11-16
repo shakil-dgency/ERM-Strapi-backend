@@ -128,6 +128,66 @@ export interface FreeMarketingVideoSection extends Schema.Component {
   };
 }
 
+export interface HomeOnlyErmAgencyCard extends Schema.Component {
+  collectionName: 'components_home_only_erm_agency_cards';
+  info: {
+    displayName: 'Only ERM Agency Card';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface HomeOnlyErmAgency extends Schema.Component {
+  collectionName: 'components_home_only_erm_agencies';
+  info: {
+    displayName: 'Only ERM Agency';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    only_erm_agency_card: Attribute.Component<
+      'home.only-erm-agency-card',
+      true
+    > &
+      Attribute.Required;
+    descriptive_cta: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface HomeOurClients extends Schema.Component {
+  collectionName: 'components_home_our_clients';
+  info: {
+    displayName: 'Our Clients';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    company_images: Attribute.Media & Attribute.Required;
+    descriptive_cta: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface HomeWiningStrategy extends Schema.Component {
+  collectionName: 'components_home_wining_strategies';
+  info: {
+    displayName: 'Wining Strategy';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.String & Attribute.Required;
+    strategy_1: Attribute.Text & Attribute.Required;
+    strategy_2: Attribute.Text & Attribute.Required;
+    strategy_image_1: Attribute.Media & Attribute.Required;
+    strategy_image_2: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface MoreEmployeeQualityCard extends Schema.Component {
   collectionName: 'components_more_employee_quality_cards';
   info: {
@@ -550,10 +610,11 @@ export interface SharedReportGraph extends Schema.Component {
   collectionName: 'components_shared_report_graphs';
   info: {
     displayName: 'Report Graph';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
-    title_second_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
     description: Attribute.String & Attribute.Required;
   };
 }
@@ -745,6 +806,10 @@ declare module '@strapi/types' {
       'free-marketing.marketing-strategy': FreeMarketingMarketingStrategy;
       'free-marketing.testimonial': FreeMarketingTestimonial;
       'free-marketing.video-section': FreeMarketingVideoSection;
+      'home.only-erm-agency-card': HomeOnlyErmAgencyCard;
+      'home.only-erm-agency': HomeOnlyErmAgency;
+      'home.our-clients': HomeOurClients;
+      'home.wining-strategy': HomeWiningStrategy;
       'more.employee-quality-card': MoreEmployeeQualityCard;
       'more.job-post-card': MoreJobPostCard;
       'more.job-post': MoreJobPost;

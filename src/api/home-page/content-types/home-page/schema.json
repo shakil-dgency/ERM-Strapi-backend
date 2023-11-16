@@ -1,0 +1,90 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-hero",
+      "required": true
+    },
+    "cro_opportunities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cro-opportunities",
+      "required": true
+    },
+    "other_services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.all-service-section",
+      "required": true
+    },
+    "our_clients": {
+      "displayName": "Our Clients",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.our-clients",
+      "required": true
+    },
+    "only_erm_agency": {
+      "displayName": "Only ERM Agency",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.only-erm-agency",
+      "required": true
+    },
+    "choose_how_you_work": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.key-service",
+      "required": true
+    },
+    "custom_marketing_plan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.dedicated-team",
+      "required": true
+    },
+    "dedicated_team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.dedicated-team",
+      "required": true
+    },
+    "your_team_response": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.key-service",
+      "required": true
+    },
+    "wining_strategy": {
+      "displayName": "Wining Strategy",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.wining-strategy",
+      "required": true
+    },
+    "testimonial_carousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial-carousel",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

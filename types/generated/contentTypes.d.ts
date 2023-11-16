@@ -1129,6 +1129,57 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
   };
 }
 
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'> &
+      Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    our_clients: Attribute.Component<'home.our-clients'> & Attribute.Required;
+    only_erm_agency: Attribute.Component<'home.only-erm-agency'> &
+      Attribute.Required;
+    choose_how_you_work: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    custom_marketing_plan: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
+      Attribute.Required;
+    your_team_response: Attribute.Component<'shared.key-service'> &
+      Attribute.Required;
+    wining_strategy: Attribute.Component<'home.wining-strategy'> &
+      Attribute.Required;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'> &
+      Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageDevelopmentLandingPageDevelopment
   extends Schema.SingleType {
   collectionName: 'landing_page_developments';
@@ -1737,6 +1788,7 @@ declare module '@strapi/types' {
       'api::faq.faq': ApiFaqFaq;
       'api::free-marketing-plan.free-marketing-plan': ApiFreeMarketingPlanFreeMarketingPlan;
       'api::google-ads-agency.google-ads-agency': ApiGoogleAdsAgencyGoogleAdsAgency;
+      'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
