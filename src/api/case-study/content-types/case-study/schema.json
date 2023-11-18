@@ -26,12 +26,12 @@
       "required": true
     },
     "hero_logo": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "title_first_line": {
       "type": "string",
@@ -92,6 +92,10 @@
       "required": true
     },
     "service_renderd": {
+      "type": "string",
+      "required": true
+    },
+    "card_cta": {
       "type": "string",
       "required": true
     }

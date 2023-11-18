@@ -851,6 +851,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     address: Attribute.String & Attribute.Required;
     industry: Attribute.String & Attribute.Required;
     service_renderd: Attribute.String & Attribute.Required;
+    card_cta: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
