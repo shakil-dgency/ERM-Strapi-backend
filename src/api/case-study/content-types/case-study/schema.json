@@ -80,7 +80,7 @@
       "required": true
     },
     "about_client": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "address": {
@@ -91,13 +91,18 @@
       "type": "string",
       "required": true
     },
-    "service_renderd": {
-      "type": "string",
-      "required": true
-    },
     "card_cta": {
       "type": "string",
       "required": true
+    },
+    "service_rendered": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

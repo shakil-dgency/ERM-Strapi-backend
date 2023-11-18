@@ -847,11 +847,19 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     statistic_4_title: Attribute.String & Attribute.Required;
     case_details: Attribute.Component<'more.case-studies-details', true> &
       Attribute.Required;
-    about_client: Attribute.String & Attribute.Required;
+    about_client: Attribute.Text & Attribute.Required;
     address: Attribute.String & Attribute.Required;
     industry: Attribute.String & Attribute.Required;
-    service_renderd: Attribute.String & Attribute.Required;
     card_cta: Attribute.String & Attribute.Required;
+    service_rendered: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
