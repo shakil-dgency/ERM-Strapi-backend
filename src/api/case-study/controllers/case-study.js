@@ -20,7 +20,7 @@ module.exports = createCoreController(
         .query("api::case-study.case-study")
         .findOne({
           where: { slug: id },
-          populate: ["case_details", "hero_logo"],
+          populate: ["case_details", "hero_logo", "footer_top_cta"],
         });
       const sanitizedResults = await this.sanitizeOutput(entity, ctx);
 

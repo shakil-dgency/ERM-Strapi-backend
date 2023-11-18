@@ -860,6 +860,8 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
           preset: 'standard';
         }
       >;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

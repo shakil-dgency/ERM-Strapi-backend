@@ -103,6 +103,12 @@
       },
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
     }
   }
 }
