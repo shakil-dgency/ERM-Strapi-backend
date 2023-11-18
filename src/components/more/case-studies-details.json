@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_more_case_studies_details",
+  "info": {
+    "displayName": "Case Studies Details"
+  },
+  "options": {},
+  "attributes": {
+    "case_title": {
+      "type": "string",
+      "required": true
+    },
+    "case_details": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

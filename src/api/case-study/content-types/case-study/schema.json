@@ -4,7 +4,8 @@
   "info": {
     "singularName": "case-study",
     "pluralName": "case-studies",
-    "displayName": "Case Studies"
+    "displayName": "Case Studies",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,76 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
+      "required": true
+    },
+    "hero_logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "statistic_1": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_2": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_3": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_4": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_1_title": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_2_title": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_3_title": {
+      "type": "string",
+      "required": true
+    },
+    "statistic_4_title": {
+      "type": "string",
+      "required": true
+    },
+    "case_details": {
+      "displayName": "Case Studies Details",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.case-studies-details",
+      "required": true
+    },
+    "about_client": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "industry": {
+      "type": "string",
+      "required": true
+    },
+    "service_renderd": {
+      "type": "string",
       "required": true
     }
   }

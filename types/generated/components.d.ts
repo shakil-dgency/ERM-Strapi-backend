@@ -188,6 +188,24 @@ export interface HomeWiningStrategy extends Schema.Component {
   };
 }
 
+export interface MoreCaseStudiesDetails extends Schema.Component {
+  collectionName: 'components_more_case_studies_details';
+  info: {
+    displayName: 'Case Studies Details';
+  };
+  attributes: {
+    case_title: Attribute.String & Attribute.Required;
+    case_details: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+  };
+}
+
 export interface MoreEmployeeQualityCard extends Schema.Component {
   collectionName: 'components_more_employee_quality_cards';
   info: {
@@ -810,6 +828,7 @@ declare module '@strapi/types' {
       'home.only-erm-agency': HomeOnlyErmAgency;
       'home.our-clients': HomeOurClients;
       'home.wining-strategy': HomeWiningStrategy;
+      'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;
       'more.job-post-card': MoreJobPostCard;
       'more.job-post': MoreJobPost;

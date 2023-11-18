@@ -824,6 +824,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     singularName: 'case-study';
     pluralName: 'case-studies';
     displayName: 'Case Studies';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -833,6 +834,23 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::case-study.case-study', 'title'> &
       Attribute.Required;
+    hero_logo: Attribute.Media & Attribute.Required;
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    statistic_1: Attribute.String & Attribute.Required;
+    statistic_2: Attribute.String & Attribute.Required;
+    statistic_3: Attribute.String & Attribute.Required;
+    statistic_4: Attribute.String & Attribute.Required;
+    statistic_1_title: Attribute.String & Attribute.Required;
+    statistic_2_title: Attribute.String & Attribute.Required;
+    statistic_3_title: Attribute.String & Attribute.Required;
+    statistic_4_title: Attribute.String & Attribute.Required;
+    case_details: Attribute.Component<'more.case-studies-details', true> &
+      Attribute.Required;
+    about_client: Attribute.String & Attribute.Required;
+    address: Attribute.String & Attribute.Required;
+    industry: Attribute.String & Attribute.Required;
+    service_renderd: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
