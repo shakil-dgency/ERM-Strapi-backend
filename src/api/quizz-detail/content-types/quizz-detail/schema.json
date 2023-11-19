@@ -43,11 +43,15 @@
       "required": true
     },
     "quizz_card_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quizz_card_cta": {
+      "type": "string",
       "required": true
     }
   }
