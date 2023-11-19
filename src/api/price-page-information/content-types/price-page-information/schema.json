@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "hero_heading": {
-      "type": "text",
-      "required": true
-    },
     "hero_description": {
       "type": "text",
       "required": true
@@ -50,6 +46,13 @@
       },
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
     }
   }
 }

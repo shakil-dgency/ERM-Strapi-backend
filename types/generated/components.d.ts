@@ -410,6 +410,7 @@ export interface SharedCaseStudySection extends Schema.Component {
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -538,6 +539,7 @@ export interface SharedFooterTopCta extends Schema.Component {
     title_second_line: Attribute.String;
     description: Attribute.Text;
     cta: Attribute.String & Attribute.Required;
+    cta_slug: Attribute.String;
   };
 }
 

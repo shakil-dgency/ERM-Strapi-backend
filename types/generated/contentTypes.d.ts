@@ -1450,7 +1450,6 @@ export interface ApiPricePageInformationPricePageInformation
     draftAndPublish: true;
   };
   attributes: {
-    hero_heading: Attribute.Text & Attribute.Required;
     hero_description: Attribute.Text & Attribute.Required;
     price_card_heading: Attribute.Text & Attribute.Required;
     situation1: Attribute.RichText &
@@ -1475,6 +1474,8 @@ export interface ApiPricePageInformationPricePageInformation
           preset: 'rich';
         }
       >;
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -20,6 +20,9 @@
     "cta": {
       "type": "string",
       "required": true
+    },
+    "cta_slug": {
+      "type": "string"
     }
   }
 }
