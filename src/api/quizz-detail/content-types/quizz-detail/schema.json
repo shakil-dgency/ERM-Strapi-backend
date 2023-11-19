@@ -53,6 +53,22 @@
     "quizz_card_cta": {
       "type": "string",
       "required": true
+    },
+    "quizz_image_left": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "quizz_image_right": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
