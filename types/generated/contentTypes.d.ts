@@ -1550,6 +1550,7 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
     short_description: Attribute.String & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    quizz_card_image: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
