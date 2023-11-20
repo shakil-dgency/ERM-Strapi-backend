@@ -23,13 +23,13 @@
       "type": "text",
       "required": true
     },
-    "faq_section1": {
+    "question_and_answer": {
       "type": "component",
       "repeatable": true,
       "component": "usp.faq-question-and-answer",
       "required": true
     },
-    "faq_section2": {
+    "question_and_answer_another_section": {
       "type": "component",
       "repeatable": true,
       "component": "usp.faq-question-and-answer",

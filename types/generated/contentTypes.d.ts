@@ -1042,9 +1042,15 @@ export interface ApiFaqFaq extends Schema.SingleType {
     hero_title_first_line: Attribute.String & Attribute.Required;
     hero_title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    faq_section1: Attribute.Component<'usp.faq-question-and-answer', true> &
+    question_and_answer: Attribute.Component<
+      'usp.faq-question-and-answer',
+      true
+    > &
       Attribute.Required;
-    faq_section2: Attribute.Component<'usp.faq-question-and-answer', true> &
+    question_and_answer_another_section: Attribute.Component<
+      'usp.faq-question-and-answer',
+      true
+    > &
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
