@@ -1547,13 +1547,15 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
     slug: Attribute.UID<'api::quizz-detail.quizz-detail', 'quizz_title'> &
       Attribute.Required;
     quizz_tag: Attribute.String & Attribute.Required;
-    short_description: Attribute.String & Attribute.Required;
+    card_description: Attribute.String & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     quizz_card_image: Attribute.Media & Attribute.Required;
     quizz_card_cta: Attribute.String & Attribute.Required;
     quizz_image_left: Attribute.Media & Attribute.Required;
     quizz_image_right: Attribute.Media & Attribute.Required;
+    body_description: Attribute.String & Attribute.Required;
+    body_cta: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

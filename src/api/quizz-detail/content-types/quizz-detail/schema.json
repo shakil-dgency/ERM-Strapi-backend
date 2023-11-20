@@ -32,7 +32,7 @@
       "type": "string",
       "required": true
     },
-    "short_description": {
+    "card_description": {
       "type": "string",
       "required": true
     },
@@ -55,19 +55,27 @@
       "required": true
     },
     "quizz_image_left": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "quizz_image_right": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "body_description": {
+      "type": "string",
+      "required": true
+    },
+    "body_cta": {
+      "type": "string",
       "required": true
     }
   }
