@@ -1560,10 +1560,18 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
     quizz_card_cta: Attribute.String & Attribute.Required;
     quizz_image_left: Attribute.Media & Attribute.Required;
     quizz_image_right: Attribute.Media & Attribute.Required;
-    body_description: Attribute.Text & Attribute.Required;
     body_cta: Attribute.String & Attribute.Required;
     nav_icon: Attribute.Media & Attribute.Required;
     nav_short_description: Attribute.String & Attribute.Required;
+    body_description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -70,25 +70,30 @@
         "images"
       ]
     },
-    "body_description": {
-      "type": "text",
-      "required": true
-    },
     "body_cta": {
       "type": "string",
       "required": true
     },
     "nav_icon": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "nav_short_description": {
       "type": "string",
       "required": true
+    },
+    "body_description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
