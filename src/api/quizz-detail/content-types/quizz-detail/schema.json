@@ -77,6 +77,18 @@
     "body_cta": {
       "type": "string",
       "required": true
+    },
+    "nav_icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "nav_short_description": {
+      "type": "string",
+      "required": true
     }
   }
 }
