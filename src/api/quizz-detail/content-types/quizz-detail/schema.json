@@ -71,7 +71,7 @@
       ]
     },
     "body_description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "body_cta": {

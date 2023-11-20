@@ -1554,7 +1554,7 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
     quizz_card_cta: Attribute.String & Attribute.Required;
     quizz_image_left: Attribute.Media & Attribute.Required;
     quizz_image_right: Attribute.Media & Attribute.Required;
-    body_description: Attribute.String & Attribute.Required;
+    body_description: Attribute.Text & Attribute.Required;
     body_cta: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
