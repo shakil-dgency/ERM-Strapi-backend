@@ -1,7 +1,8 @@
 {
   "collectionName": "components_more_single_members",
   "info": {
-    "displayName": "Single member"
+    "displayName": "Single member",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -36,6 +37,22 @@
         "preset": "standard"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "team_member_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "experience_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

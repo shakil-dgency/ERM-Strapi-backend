@@ -279,6 +279,7 @@ export interface MoreSingleMember extends Schema.Component {
   collectionName: 'components_more_single_members';
   info: {
     displayName: 'Single member';
+    description: '';
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -301,6 +302,8 @@ export interface MoreSingleMember extends Schema.Component {
           preset: 'standard';
         }
       >;
+    team_member_image: Attribute.Media & Attribute.Required;
+    experience_image: Attribute.Media & Attribute.Required;
   };
 }
 
