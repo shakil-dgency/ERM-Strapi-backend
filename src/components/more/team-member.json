@@ -1,7 +1,8 @@
 {
   "collectionName": "components_more_team_members",
   "info": {
-    "displayName": "Team Member"
+    "displayName": "Team Member",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,17 @@
       "repeatable": true,
       "component": "more.single-member",
       "required": false
+    },
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }

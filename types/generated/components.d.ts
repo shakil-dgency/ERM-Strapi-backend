@@ -308,9 +308,13 @@ export interface MoreTeamMember extends Schema.Component {
   collectionName: 'components_more_team_members';
   info: {
     displayName: 'Team Member';
+    description: '';
   };
   attributes: {
     single_member: Attribute.Component<'more.single-member', true>;
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
   };
 }
 
