@@ -25,6 +25,7 @@ module.exports = createCoreController(
             "quizz_image_left",
             "quizz_image_right",
             "footer_top_cta",
+            "nav_icon",
           ],
         });
       const sanitizedResults = await this.sanitizeOutput(entity, ctx);
