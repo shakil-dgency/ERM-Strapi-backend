@@ -233,12 +233,14 @@ export interface MoreJobPost extends Schema.Component {
   collectionName: 'components_more_job_posts';
   info: {
     displayName: 'Job Post';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     job_post_card: Attribute.Component<'more.job-post-card', true> &
       Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
   };
 }
 

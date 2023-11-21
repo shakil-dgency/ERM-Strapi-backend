@@ -4,7 +4,8 @@
   "info": {
     "singularName": "career",
     "pluralName": "careers",
-    "displayName": "Career"
+    "displayName": "Career",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

@@ -756,6 +756,7 @@ export interface ApiCareerCareer extends Schema.SingleType {
     singularName: 'career';
     pluralName: 'careers';
     displayName: 'Career';
+    description: '';
   };
   options: {
     draftAndPublish: true;
