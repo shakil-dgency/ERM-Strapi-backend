@@ -1,7 +1,8 @@
 {
   "collectionName": "components_free_marketing_video_sections",
   "info": {
-    "displayName": "Video Section"
+    "displayName": "Video Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,7 +14,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "video_url": {

@@ -63,6 +63,10 @@
       "repeatable": true,
       "component": "shared.footer-top-cta",
       "required": true
+    },
+    "free_marketing_banner": {
+      "type": "string",
+      "required": true
     }
   }
 }

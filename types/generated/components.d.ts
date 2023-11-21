@@ -4,6 +4,7 @@ export interface FreeMarketingCardViewFirst extends Schema.Component {
   collectionName: 'components_free_marketing_card_view_firsts';
   info: {
     displayName: 'Card View First';
+    description: '';
   };
   attributes: {
     service1: Attribute.String;
@@ -14,6 +15,8 @@ export interface FreeMarketingCardViewFirst extends Schema.Component {
     service6: Attribute.String;
     service7: Attribute.String;
     card_title: Attribute.String;
+    card_sub_title: Attribute.String;
+    card_cta: Attribute.String & Attribute.Required;
   };
 }
 
@@ -21,6 +24,7 @@ export interface FreeMarketingCardViewSecond extends Schema.Component {
   collectionName: 'components_free_marketing_card_view_seconds';
   info: {
     displayName: 'Card View Second';
+    description: '';
   };
   attributes: {
     goal_1: Attribute.String;
@@ -29,6 +33,8 @@ export interface FreeMarketingCardViewSecond extends Schema.Component {
     goal_4: Attribute.String;
     goal_5: Attribute.String;
     card_title: Attribute.String;
+    card_sub_title: Attribute.String;
+    card_cta: Attribute.String;
   };
 }
 
@@ -36,10 +42,12 @@ export interface FreeMarketingCardViewThird extends Schema.Component {
   collectionName: 'components_free_marketing_card_view_thirds';
   info: {
     displayName: 'Card View Third';
+    description: '';
   };
   attributes: {
     card_title: Attribute.String;
     phone_number: Attribute.String;
+    card_cta: Attribute.String;
   };
 }
 
@@ -72,11 +80,12 @@ export interface FreeMarketingMarketingPlan extends Schema.Component {
   collectionName: 'components_free_marketing_marketing_plans';
   info: {
     displayName: 'Marketing Plan';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    description: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     marketing_card: Attribute.Component<
       'free-marketing.marketing-plan-card',
       true
@@ -89,11 +98,12 @@ export interface FreeMarketingMarketingStrategy extends Schema.Component {
   collectionName: 'components_free_marketing_marketing_strategies';
   info: {
     displayName: 'Marketing Strategy';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    description: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     marketing_plan_card: Attribute.Component<
       'free-marketing.marketing-plan-card',
       true
@@ -105,11 +115,12 @@ export interface FreeMarketingTestimonial extends Schema.Component {
   collectionName: 'components_free_marketing_testimonials';
   info: {
     displayName: 'Testimonial';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    description: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     testimonial_card: Attribute.Component<'usp.testimonial-card', true> &
       Attribute.Required;
   };
@@ -119,11 +130,12 @@ export interface FreeMarketingVideoSection extends Schema.Component {
   collectionName: 'components_free_marketing_video_sections';
   info: {
     displayName: 'Video Section';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    description: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     video_url: Attribute.String & Attribute.Required;
   };
 }
@@ -264,6 +276,7 @@ export interface MoreQualityOfAEmployee extends Schema.Component {
   collectionName: 'components_more_quality_of_a_employees';
   info: {
     displayName: 'Quality Of a Employee';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
@@ -274,6 +287,8 @@ export interface MoreQualityOfAEmployee extends Schema.Component {
       true
     > &
       Attribute.Required;
+    descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_url: Attribute.String;
   };
 }
 

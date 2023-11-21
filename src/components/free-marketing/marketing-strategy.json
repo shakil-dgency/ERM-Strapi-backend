@@ -1,7 +1,8 @@
 {
   "collectionName": "components_free_marketing_marketing_strategies",
   "info": {
-    "displayName": "Marketing Strategy"
+    "displayName": "Marketing Strategy",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,7 +14,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "marketing_plan_card": {
