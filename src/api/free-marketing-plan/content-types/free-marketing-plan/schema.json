@@ -60,7 +60,7 @@
     },
     "footer_top_cta": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.footer-top-cta",
       "required": true
     },

@@ -1091,7 +1091,7 @@ export interface ApiFreeMarketingPlanFreeMarketingPlan
       Attribute.Required;
     marketing_strategy: Attribute.Component<'free-marketing.marketing-strategy'> &
       Attribute.Required;
-    footer_top_cta: Attribute.Component<'shared.footer-top-cta', true> &
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     free_marketing_banner: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
