@@ -55,12 +55,15 @@
       "required": true
     },
     "cro_opportunity_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cro_cta_slug": {
+      "type": "string"
     }
   }
 }

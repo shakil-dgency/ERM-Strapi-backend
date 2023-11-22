@@ -21,6 +21,13 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "card_cta": {
+      "type": "string",
+      "required": true
+    },
+    "card_cta_slug": {
+      "type": "string"
     }
   }
 }

@@ -424,6 +424,8 @@ export interface SharedAllServiceSection extends Schema.Component {
     description: Attribute.Text & Attribute.Required;
     other_services_card: Attribute.Component<'usp.all-service-card', true> &
       Attribute.Required;
+    descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -474,6 +476,7 @@ export interface SharedCroOpportunities extends Schema.Component {
     cro_description3: Attribute.String & Attribute.Required;
     cro_description4: Attribute.String & Attribute.Required;
     cro_opportunity_image: Attribute.Media & Attribute.Required;
+    cro_cta_slug: Attribute.String;
   };
 }
 
@@ -770,6 +773,8 @@ export interface UspAllServiceCard extends Schema.Component {
     card_title: Attribute.String & Attribute.Required;
     card_description: Attribute.Text & Attribute.Required;
     card_image: Attribute.Media & Attribute.Required;
+    card_cta: Attribute.String & Attribute.Required;
+    card_cta_slug: Attribute.String;
   };
 }
 
