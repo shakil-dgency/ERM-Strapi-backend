@@ -28,7 +28,7 @@
       "type": "string",
       "required": true
     },
-    "descriptive_cta_url": {
+    "descriptive_cta_slug": {
       "type": "string"
     }
   }

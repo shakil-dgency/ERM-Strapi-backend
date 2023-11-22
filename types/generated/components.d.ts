@@ -156,6 +156,7 @@ export interface HomeOnlyErmAgency extends Schema.Component {
   collectionName: 'components_home_only_erm_agencies';
   info: {
     displayName: 'Only ERM Agency';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
@@ -167,6 +168,7 @@ export interface HomeOnlyErmAgency extends Schema.Component {
     > &
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -174,6 +176,7 @@ export interface HomeOurClients extends Schema.Component {
   collectionName: 'components_home_our_clients';
   info: {
     displayName: 'Our Clients';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
@@ -181,6 +184,7 @@ export interface HomeOurClients extends Schema.Component {
     description: Attribute.String & Attribute.Required;
     company_images: Attribute.Media & Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -288,7 +292,7 @@ export interface MoreQualityOfAEmployee extends Schema.Component {
     > &
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
-    descriptive_cta_url: Attribute.String;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -493,6 +497,7 @@ export interface SharedDedicatedTeam extends Schema.Component {
   collectionName: 'components_shared_dedicated_teams';
   info: {
     displayName: 'Dedicated Team';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
@@ -500,6 +505,7 @@ export interface SharedDedicatedTeam extends Schema.Component {
     description: Attribute.Text & Attribute.Required;
     team_image: Attribute.Media & Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -549,6 +555,7 @@ export interface SharedFaqSection extends Schema.Component {
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
     title_first_line: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -582,6 +589,7 @@ export interface SharedKeyService extends Schema.Component {
     others_card: Attribute.Component<'usp.key-service-card', true> &
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -667,11 +675,13 @@ export interface SharedSectionBreakCta extends Schema.Component {
   collectionName: 'components_shared_section_break_ctas';
   info: {
     displayName: 'Section Break cta';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     cta: Attribute.String & Attribute.Required;
     image: Attribute.Media & Attribute.Required;
+    cta_slug: Attribute.String;
   };
 }
 
@@ -717,6 +727,7 @@ export interface SharedServiceHero extends Schema.Component {
     description_under_cta: Attribute.String & Attribute.Required;
     left_image: Attribute.Media & Attribute.Required;
     right_image: Attribute.Media & Attribute.Required;
+    hero_cta_slug: Attribute.String;
   };
 }
 
@@ -745,6 +756,7 @@ export interface SharedTestimonialCarousel extends Schema.Component {
     testimonial_data: Attribute.Component<'usp.testimonial-card', true> &
       Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 

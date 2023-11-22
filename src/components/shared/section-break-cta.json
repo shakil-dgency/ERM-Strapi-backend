@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_section_break_ctas",
   "info": {
-    "displayName": "Section Break cta"
+    "displayName": "Section Break cta",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,12 +15,15 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cta_slug": {
+      "type": "string"
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_dedicated_teams",
   "info": {
-    "displayName": "Dedicated Team"
+    "displayName": "Dedicated Team",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,16 +18,19 @@
       "required": true
     },
     "team_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "descriptive_cta": {
       "type": "string",
       "required": true
+    },
+    "descriptive_cta_slug": {
+      "type": "string"
     }
   }
 }
