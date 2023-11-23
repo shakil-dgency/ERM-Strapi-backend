@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "all_service_pages",
+  "info": {
+    "singularName": "all-service-page",
+    "pluralName": "all-service-pages",
+    "displayName": "all Service Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-hero",
+      "required": true
+    },
+    "other_services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.all-service-section",
+      "required": true
+    },
+    "marketing_plan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "free-marketing.marketing-plan",
+      "required": true
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.faq-section",
+      "required": true
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta",
+      "required": true
+    }
+  }
+}

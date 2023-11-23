@@ -715,6 +715,44 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiAllServicePageAllServicePage extends Schema.SingleType {
+  collectionName: 'all_service_pages';
+  info: {
+    singularName: 'all-service-page';
+    pluralName: 'all-service-pages';
+    displayName: 'all Service Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.service-hero'> & Attribute.Required;
+    other_services: Attribute.Component<'shared.all-service-section'> &
+      Attribute.Required;
+    marketing_plan: Attribute.Component<'free-marketing.marketing-plan'> &
+      Attribute.Required;
+    faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::all-service-page.all-service-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::all-service-page.all-service-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -1832,6 +1870,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::all-service-page.all-service-page': ApiAllServicePageAllServicePage;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
