@@ -17,7 +17,7 @@
       "type": "text",
       "required": true
     },
-    "testimonial_card": {
+    "testimonial_data": {
       "type": "component",
       "repeatable": true,
       "component": "usp.testimonial-card",

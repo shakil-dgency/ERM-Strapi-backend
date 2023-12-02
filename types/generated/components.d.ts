@@ -121,7 +121,7 @@ export interface FreeMarketingTestimonial extends Schema.Component {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    testimonial_card: Attribute.Component<'usp.testimonial-card', true> &
+    testimonial_data: Attribute.Component<'usp.testimonial-card', true> &
       Attribute.Required;
   };
 }
