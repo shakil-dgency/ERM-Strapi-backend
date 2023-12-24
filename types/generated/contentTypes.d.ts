@@ -1574,6 +1574,47 @@ export interface ApiPricePageInformationPricePageInformation
   };
 }
 
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'Privacy Policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    Privacy_body: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiQuizzQuizz extends Schema.SingleType {
   collectionName: 'quizzes';
   info: {
@@ -1801,6 +1842,47 @@ export interface ApiTeamTeam extends Schema.SingleType {
   };
 }
 
+export interface ApiTermsOfServiceTermsOfService extends Schema.SingleType {
+  collectionName: 'terms_of_services';
+  info: {
+    singularName: 'terms-of-service';
+    pluralName: 'terms-of-services';
+    displayName: 'Terms Of Service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    conditions_body: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-of-service.terms-of-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-of-service.terms-of-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestimonialTestimonial extends Schema.SingleType {
   collectionName: 'testimonials';
   info: {
@@ -1923,11 +2005,13 @@ declare module '@strapi/types' {
       'api::our-work.our-work': ApiOurWorkOurWork;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::quizz.quizz': ApiQuizzQuizz;
       'api::quizz-detail.quizz-detail': ApiQuizzDetailQuizzDetail;
       'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
       'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
       'api::team.team': ApiTeamTeam;
+      'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::website-development.website-development': ApiWebsiteDevelopmentWebsiteDevelopment;
     }
