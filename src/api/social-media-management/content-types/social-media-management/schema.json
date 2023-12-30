@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media-management",
     "pluralName": "social-media-managements",
-    "displayName": "Social Media Management"
+    "displayName": "Social Media Management",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -86,6 +87,11 @@
       "repeatable": false,
       "component": "shared.footer-top-cta",
       "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

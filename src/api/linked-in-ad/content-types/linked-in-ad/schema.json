@@ -4,7 +4,8 @@
   "info": {
     "singularName": "linked-in-ad",
     "pluralName": "linked-in-ads",
-    "displayName": "LinkedIn Ads"
+    "displayName": "LinkedIn Ads",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -87,6 +88,11 @@
       "repeatable": false,
       "component": "shared.footer-top-cta",
       "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

@@ -873,6 +873,7 @@ export interface ApiCaseStudiesPageCaseStudiesPage extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1029,6 +1030,7 @@ export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
     faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1054,6 +1056,7 @@ export interface ApiFacebookAndInstagramAdFacebookAndInstagramAd
     singularName: 'facebook-and-instagram-ad';
     pluralName: 'facebook-and-instagram-ads';
     displayName: 'Facebook and Instagram Ads';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1082,6 +1085,7 @@ export interface ApiFacebookAndInstagramAdFacebookAndInstagramAd
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1220,6 +1224,7 @@ export interface ApiGoogleAdsAgencyGoogleAdsAgency extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1326,6 +1331,7 @@ export interface ApiLandingPageDevelopmentLandingPageDevelopment
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1350,6 +1356,7 @@ export interface ApiLinkedInAdLinkedInAd extends Schema.SingleType {
     singularName: 'linked-in-ad';
     pluralName: 'linked-in-ads';
     displayName: 'LinkedIn Ads';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1378,6 +1385,7 @@ export interface ApiLinkedInAdLinkedInAd extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1432,6 +1440,7 @@ export interface ApiMicrosoftAdMicrosoftAd extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1456,6 +1465,7 @@ export interface ApiOurWorkOurWork extends Schema.SingleType {
     singularName: 'our-work';
     pluralName: 'our-works';
     displayName: 'Our Works';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1466,6 +1476,7 @@ export interface ApiOurWorkOurWork extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1556,6 +1567,7 @@ export interface ApiPricePageInformationPricePageInformation
       >;
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1687,6 +1699,7 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1744,6 +1757,7 @@ export interface ApiSearchEngineOptimizationSearchEngineOptimization
       Attribute.Required;
     content_types: Attribute.Component<'shared.content-types'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1769,6 +1783,7 @@ export interface ApiSocialMediaManagementSocialMediaManagement
     singularName: 'social-media-management';
     pluralName: 'social-media-managements';
     displayName: 'Social Media Management';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1796,6 +1811,7 @@ export interface ApiSocialMediaManagementSocialMediaManagement
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1889,6 +1905,7 @@ export interface ApiTestimonialTestimonial extends Schema.SingleType {
     singularName: 'testimonial';
     pluralName: 'testimonials';
     displayName: 'Testimonials';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1899,6 +1916,7 @@ export interface ApiTestimonialTestimonial extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1924,6 +1942,7 @@ export interface ApiWebsiteDevelopmentWebsiteDevelopment
     singularName: 'website-development';
     pluralName: 'website-developments';
     displayName: 'Website Development';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1951,6 +1970,7 @@ export interface ApiWebsiteDevelopmentWebsiteDevelopment
     faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
