@@ -4,7 +4,8 @@
   "info": {
     "singularName": "terms-of-service",
     "pluralName": "terms-of-services",
-    "displayName": "Terms Of Service"
+    "displayName": "Terms Of Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -29,6 +30,11 @@
       "repeatable": false,
       "component": "shared.footer-top-cta",
       "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

@@ -697,6 +697,7 @@ export interface ApiAboutAbout extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -735,6 +736,7 @@ export interface ApiAllServicePageAllServicePage extends Schema.SingleType {
     faq_section: Attribute.Component<'shared.faq-section'> & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -838,6 +840,7 @@ export interface ApiCareerCareer extends Schema.SingleType {
     employee_quality: Attribute.Component<'more.quality-of-a-employee'> &
       Attribute.Required;
     job_post: Attribute.Component<'more.job-post'> & Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -936,6 +939,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
       >;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -972,6 +976,7 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     contact_card_title: Attribute.String & Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1131,6 +1136,7 @@ export interface ApiFaqFaq extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1170,6 +1176,7 @@ export interface ApiFreeMarketingPlanFreeMarketingPlan
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     free_marketing_banner: Attribute.String & Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1249,6 +1256,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'Home Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1276,6 +1284,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1592,6 +1601,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
     singularName: 'privacy-policy';
     pluralName: 'privacy-policies';
     displayName: 'Privacy Policy';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1609,6 +1619,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
       >;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1644,6 +1655,7 @@ export interface ApiQuizzQuizz extends Schema.SingleType {
     description: Attribute.Text & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1848,6 +1860,7 @@ export interface ApiTeamTeam extends Schema.SingleType {
       Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1864,6 +1877,7 @@ export interface ApiTermsOfServiceTermsOfService extends Schema.SingleType {
     singularName: 'terms-of-service';
     pluralName: 'terms-of-services';
     displayName: 'Terms Of Service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1881,6 +1895,7 @@ export interface ApiTermsOfServiceTermsOfService extends Schema.SingleType {
       >;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
