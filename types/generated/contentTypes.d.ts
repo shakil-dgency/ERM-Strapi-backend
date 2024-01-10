@@ -1712,6 +1712,7 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
         }
       >;
     seo: Attribute.Component<'shared.seo'>;
+    main_quiz: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
