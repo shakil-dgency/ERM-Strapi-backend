@@ -973,10 +973,14 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     hero_title_first_line: Attribute.String & Attribute.Required;
     hero_title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
-      Attribute.Required;
     contact_card_title: Attribute.String & Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    description_title_firstline: Attribute.String & Attribute.Required;
+    description_title_secondline: Attribute.String;
+    list_descriptor: Attribute.String & Attribute.Required;
+    lists: Attribute.Component<'usp.contact-list', true> & Attribute.Required;
+    phone_number: Attribute.String & Attribute.Required;
+    contact_cta: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1712,7 +1716,7 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
         }
       >;
     seo: Attribute.Component<'shared.seo'>;
-    main_quiz: Attribute.Text & Attribute.Required;
+    main_quiz_link: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

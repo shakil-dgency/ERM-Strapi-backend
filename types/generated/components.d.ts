@@ -793,6 +793,16 @@ export interface UspCaseStudyCard extends Schema.Component {
   };
 }
 
+export interface UspContactList extends Schema.Component {
+  collectionName: 'components_usp_contact_lists';
+  info: {
+    displayName: 'Contact List';
+  };
+  attributes: {
+    list: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface UspFaqQuestionAndAnswer extends Schema.Component {
   collectionName: 'components_usp_faq_question_and_answers';
   info: {
@@ -907,6 +917,7 @@ declare module '@strapi/types' {
       'shared.testimonial-carousel': SharedTestimonialCarousel;
       'usp.all-service-card': UspAllServiceCard;
       'usp.case-study-card': UspCaseStudyCard;
+      'usp.contact-list': UspContactList;
       'usp.faq-question-and-answer': UspFaqQuestionAndAnswer;
       'usp.key-service-card': UspKeyServiceCard;
       'usp.service-list': UspServiceList;

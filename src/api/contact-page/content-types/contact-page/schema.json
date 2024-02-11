@@ -23,12 +23,6 @@
       "type": "text",
       "required": true
     },
-    "footer_top_cta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.footer-top-cta",
-      "required": true
-    },
     "contact_card_title": {
       "type": "string",
       "required": true
@@ -37,6 +31,32 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "description_title_firstline": {
+      "type": "string",
+      "required": true
+    },
+    "description_title_secondline": {
+      "type": "string"
+    },
+    "list_descriptor": {
+      "type": "string",
+      "required": true
+    },
+    "lists": {
+      "displayName": "Contact List",
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.contact-list",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "contact_cta": {
+      "type": "string",
+      "required": true
     }
   }
 }

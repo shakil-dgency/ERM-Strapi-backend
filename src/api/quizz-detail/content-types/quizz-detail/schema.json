@@ -100,7 +100,7 @@
       "repeatable": false,
       "component": "shared.seo"
     },
-    "main_quiz": {
+    "main_quiz_link": {
       "type": "text",
       "required": true
     }
