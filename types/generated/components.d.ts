@@ -234,6 +234,18 @@ export interface MoreEmployeeQualityCard extends Schema.Component {
   };
 }
 
+export interface MoreFineTunedWebsite extends Schema.Component {
+  collectionName: 'components_more_fine_tuned_websites';
+  info: {
+    displayName: 'Fine Tuned Website';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface MoreJobPostCard extends Schema.Component {
   collectionName: 'components_more_job_post_cards';
   info: {
@@ -883,6 +895,7 @@ declare module '@strapi/types' {
       'home.wining-strategy': HomeWiningStrategy;
       'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;
+      'more.fine-tuned-website': MoreFineTunedWebsite;
       'more.job-post-card': MoreJobPostCard;
       'more.job-post': MoreJobPost;
       'more.portfolio': MorePortfolio;

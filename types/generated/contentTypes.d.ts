@@ -1775,6 +1775,8 @@ export interface ApiSearchEngineOptimizationSearchEngineOptimization
     content_types: Attribute.Component<'shared.content-types'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    fine_tune_website: Attribute.Component<'more.fine-tuned-website'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

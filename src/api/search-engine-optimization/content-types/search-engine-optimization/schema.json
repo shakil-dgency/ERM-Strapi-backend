@@ -99,6 +99,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "fine_tune_website": {
+      "type": "component",
+      "repeatable": false,
+      "component": "more.fine-tuned-website",
+      "required": true
     }
   }
 }
