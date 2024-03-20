@@ -36,6 +36,12 @@
     "card_cta": {
       "type": "string",
       "required": true
+    },
+    "service8": {
+      "type": "string"
+    },
+    "service9": {
+      "type": "string"
     }
   }
 }

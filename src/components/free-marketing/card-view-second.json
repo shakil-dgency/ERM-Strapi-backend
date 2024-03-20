@@ -29,6 +29,12 @@
     },
     "card_cta": {
       "type": "string"
+    },
+    "goal_6": {
+      "type": "string"
+    },
+    "goal_7": {
+      "type": "string"
     }
   }
 }

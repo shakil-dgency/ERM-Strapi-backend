@@ -17,6 +17,8 @@ export interface FreeMarketingCardViewFirst extends Schema.Component {
     card_title: Attribute.String;
     card_sub_title: Attribute.String;
     card_cta: Attribute.String & Attribute.Required;
+    service8: Attribute.String;
+    service9: Attribute.String;
   };
 }
 
@@ -35,6 +37,8 @@ export interface FreeMarketingCardViewSecond extends Schema.Component {
     card_title: Attribute.String;
     card_sub_title: Attribute.String;
     card_cta: Attribute.String;
+    goal_6: Attribute.String;
+    goal_7: Attribute.String;
   };
 }
 
