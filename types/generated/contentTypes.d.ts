@@ -721,7 +721,7 @@ export interface ApiAllServicePageAllServicePage extends Schema.SingleType {
   info: {
     singularName: 'all-service-page';
     pluralName: 'all-service-pages';
-    displayName: 'all Service Page';
+    displayName: 'All Service Page';
     description: '';
   };
   options: {
@@ -796,6 +796,7 @@ export interface ApiBlogPageBlogPage extends Schema.SingleType {
     singularName: 'blog-page';
     pluralName: 'blog-pages';
     displayName: 'Blog Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -806,6 +807,7 @@ export interface ApiBlogPageBlogPage extends Schema.SingleType {
     description: Attribute.Text & Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
