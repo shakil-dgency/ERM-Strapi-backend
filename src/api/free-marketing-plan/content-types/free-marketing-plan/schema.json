@@ -30,40 +30,6 @@
       "component": "free-marketing.free-marketing-hero-card",
       "required": true
     },
-    "video_section": {
-      "displayName": "Video Section",
-      "type": "component",
-      "repeatable": false,
-      "component": "free-marketing.video-section",
-      "required": true
-    },
-    "marketing_plan": {
-      "displayName": "Marketing Plan",
-      "type": "component",
-      "repeatable": false,
-      "component": "free-marketing.marketing-plan",
-      "required": true
-    },
-    "testimonial": {
-      "displayName": "Testimonial",
-      "type": "component",
-      "repeatable": false,
-      "component": "free-marketing.testimonial",
-      "required": true
-    },
-    "marketing_strategy": {
-      "displayName": "Marketing Strategy",
-      "type": "component",
-      "repeatable": false,
-      "component": "free-marketing.marketing-strategy",
-      "required": true
-    },
-    "footer_top_cta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.footer-top-cta",
-      "required": true
-    },
     "free_marketing_banner": {
       "type": "string",
       "required": true

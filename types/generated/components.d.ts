@@ -98,49 +98,18 @@ export interface FreeMarketingMarketingPlan extends Schema.Component {
   };
 }
 
-export interface FreeMarketingMarketingStrategy extends Schema.Component {
-  collectionName: 'components_free_marketing_marketing_strategies';
+export interface HomeGoogleAnalytics extends Schema.Component {
+  collectionName: 'components_home_google_analytics';
   info: {
-    displayName: 'Marketing Strategy';
+    displayName: 'Google Analytics';
     description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    description: Attribute.Text & Attribute.Required;
-    marketing_plan_card: Attribute.Component<
-      'free-marketing.marketing-plan-card',
-      true
-    >;
-  };
-}
-
-export interface FreeMarketingTestimonial extends Schema.Component {
-  collectionName: 'components_free_marketing_testimonials';
-  info: {
-    displayName: 'Testimonial';
-    description: '';
-  };
-  attributes: {
-    title_first_line: Attribute.String & Attribute.Required;
-    title_second_line: Attribute.String;
-    description: Attribute.Text & Attribute.Required;
-    testimonial_data: Attribute.Component<'usp.testimonial-card', true> &
-      Attribute.Required;
-  };
-}
-
-export interface FreeMarketingVideoSection extends Schema.Component {
-  collectionName: 'components_free_marketing_video_sections';
-  info: {
-    displayName: 'Video Section';
-    description: '';
-  };
-  attributes: {
-    title_first_line: Attribute.String & Attribute.Required;
-    title_second_line: Attribute.String;
-    description: Attribute.Text & Attribute.Required;
-    video_url: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+    descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String & Attribute.Required;
   };
 }
 
@@ -890,9 +859,7 @@ declare module '@strapi/types' {
       'free-marketing.free-marketing-hero-card': FreeMarketingFreeMarketingHeroCard;
       'free-marketing.marketing-plan-card': FreeMarketingMarketingPlanCard;
       'free-marketing.marketing-plan': FreeMarketingMarketingPlan;
-      'free-marketing.marketing-strategy': FreeMarketingMarketingStrategy;
-      'free-marketing.testimonial': FreeMarketingTestimonial;
-      'free-marketing.video-section': FreeMarketingVideoSection;
+      'home.google-analytics': HomeGoogleAnalytics;
       'home.only-erm-agency-card': HomeOnlyErmAgencyCard;
       'home.only-erm-agency': HomeOnlyErmAgency;
       'home.our-clients': HomeOurClients;

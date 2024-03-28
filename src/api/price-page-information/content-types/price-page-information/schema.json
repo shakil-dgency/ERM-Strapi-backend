@@ -20,15 +20,6 @@
       "type": "text",
       "required": true
     },
-    "situation1": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "rich"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
-    },
     "price_card_inside_note": {
       "type": "text",
       "required": true,
@@ -37,15 +28,6 @@
     "price_card_outside_note": {
       "type": "text",
       "required": true
-    },
-    "situation2": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "rich"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
     },
     "title_first_line": {
       "type": "string",

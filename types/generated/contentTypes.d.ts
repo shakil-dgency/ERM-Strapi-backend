@@ -1171,16 +1171,6 @@ export interface ApiFreeMarketingPlanFreeMarketingPlan
     description: Attribute.Text & Attribute.Required;
     card_view: Attribute.Component<'free-marketing.free-marketing-hero-card'> &
       Attribute.Required;
-    video_section: Attribute.Component<'free-marketing.video-section'> &
-      Attribute.Required;
-    marketing_plan: Attribute.Component<'free-marketing.marketing-plan'> &
-      Attribute.Required;
-    testimonial: Attribute.Component<'free-marketing.testimonial'> &
-      Attribute.Required;
-    marketing_strategy: Attribute.Component<'free-marketing.marketing-strategy'> &
-      Attribute.Required;
-    footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
-      Attribute.Required;
     free_marketing_banner: Attribute.String & Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
@@ -1291,6 +1281,8 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    google_analytics: Attribute.Component<'home.google-analytics'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1558,28 +1550,10 @@ export interface ApiPricePageInformationPricePageInformation
   attributes: {
     hero_description: Attribute.Text & Attribute.Required;
     price_card_heading: Attribute.Text & Attribute.Required;
-    situation1: Attribute.RichText &
-      Attribute.Required &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'rich';
-        }
-      >;
     price_card_inside_note: Attribute.Text &
       Attribute.Required &
       Attribute.DefaultTo<'NB:'>;
     price_card_outside_note: Attribute.Text & Attribute.Required;
-    situation2: Attribute.RichText &
-      Attribute.Required &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'rich';
-        }
-      >;
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     seo: Attribute.Component<'shared.seo'>;

@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_free_marketing_testimonials",
+  "collectionName": "components_home_google_analytics",
   "info": {
-    "displayName": "Testimonial",
+    "displayName": "Google Analytics",
     "description": ""
   },
   "options": {},
@@ -14,13 +14,14 @@
       "type": "string"
     },
     "description": {
-      "type": "text",
+      "type": "text"
+    },
+    "descriptive_cta": {
+      "type": "string",
       "required": true
     },
-    "testimonial_data": {
-      "type": "component",
-      "repeatable": true,
-      "component": "usp.testimonial-card",
+    "descriptive_cta_slug": {
+      "type": "string",
       "required": true
     }
   }
