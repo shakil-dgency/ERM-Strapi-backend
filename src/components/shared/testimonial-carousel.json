@@ -12,13 +12,6 @@
       "repeatable": true,
       "component": "usp.testimonial-card",
       "required": true
-    },
-    "descriptive_cta": {
-      "type": "string",
-      "required": true
-    },
-    "descriptive_cta_slug": {
-      "type": "string"
     }
   }
 }

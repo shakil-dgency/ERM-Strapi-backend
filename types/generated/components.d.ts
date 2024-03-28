@@ -110,6 +110,7 @@ export interface HomeGoogleAnalytics extends Schema.Component {
     description: Attribute.Text;
     descriptive_cta: Attribute.String & Attribute.Required;
     descriptive_cta_slug: Attribute.String & Attribute.Required;
+    image: Attribute.Media;
   };
 }
 
@@ -743,8 +744,6 @@ export interface SharedTestimonialCarousel extends Schema.Component {
   attributes: {
     testimonial_data: Attribute.Component<'usp.testimonial-card', true> &
       Attribute.Required;
-    descriptive_cta: Attribute.String & Attribute.Required;
-    descriptive_cta_slug: Attribute.String;
   };
 }
 
