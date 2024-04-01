@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_projects_ceo_s_talks",
+  "info": {
+    "displayName": "CEO's Talk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "message": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

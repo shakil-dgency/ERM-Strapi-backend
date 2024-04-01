@@ -1479,11 +1479,18 @@ export interface ApiOurWorkOurWork extends Schema.SingleType {
   };
   attributes: {
     hero: Attribute.Component<'shared.other-hero'> & Attribute.Required;
-    works: Attribute.Component<'our-works.our-works-section'> &
-      Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    website_section: Attribute.Component<'projects.website-display'> &
+      Attribute.Required;
+    google_ads_section: Attribute.Component<'projects.website-display'>;
+    microsoft_ads_section: Attribute.Component<'projects.website-display'>;
+    display_ads_section: Attribute.Component<'projects.website-display'>;
+    social_media_section: Attribute.Component<'projects.website-display'>;
+    seo_section: Attribute.Component<'projects.website-display'>;
+    html_ads_section: Attribute.Component<'projects.html5-ads'>;
+    ceo_speach: Attribute.Component<'projects.ceo-s-talk'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

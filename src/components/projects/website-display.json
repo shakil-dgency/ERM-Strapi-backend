@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_projects_website_displays",
+  "info": {
+    "displayName": "Single Slide",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "website_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descriptive_cta": {
+      "type": "string",
+      "required": true
+    },
+    "descriptive_cta_slug": {
+      "type": "string"
+    }
+  }
+}

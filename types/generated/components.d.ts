@@ -345,21 +345,6 @@ export interface MoreWhyChooseUs extends Schema.Component {
   };
 }
 
-export interface OurWorksOurWorksSection extends Schema.Component {
-  collectionName: 'components_our_works_our_works_sections';
-  info: {
-    displayName: 'Our Works Section';
-  };
-  attributes: {
-    website_section_title: Attribute.String & Attribute.Required;
-    website_section_description: Attribute.Text & Attribute.Required;
-    Website_images: Attribute.Media & Attribute.Required;
-    ads_section_title: Attribute.String & Attribute.Required;
-    ads_section_description: Attribute.Text & Attribute.Required;
-    ads_images: Attribute.Media & Attribute.Required;
-  };
-}
-
 export interface PriceServiceItem extends Schema.Component {
   collectionName: 'components_price_service_items';
   info: {
@@ -372,6 +357,55 @@ export interface PriceServiceItem extends Schema.Component {
     image: Attribute.Media;
     price: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
     unique_id: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ProjectsCeoSTalk extends Schema.Component {
+  collectionName: 'components_projects_ceo_s_talks';
+  info: {
+    displayName: "CEO's Talk";
+    description: '';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    message: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+  };
+}
+
+export interface ProjectsHtml5Ads extends Schema.Component {
+  collectionName: 'components_projects_html5_ads';
+  info: {
+    displayName: 'Html5 Ads';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface ProjectsWebsiteDisplay extends Schema.Component {
+  collectionName: 'components_projects_website_displays';
+  info: {
+    displayName: 'Single Slide';
+    description: '';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    website_images: Attribute.Media;
+    descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -873,8 +907,10 @@ declare module '@strapi/types' {
       'more.single-member': MoreSingleMember;
       'more.team-member': MoreTeamMember;
       'more.why-choose-us': MoreWhyChooseUs;
-      'our-works.our-works-section': OurWorksOurWorksSection;
       'price.service-item': PriceServiceItem;
+      'projects.ceo-s-talk': ProjectsCeoSTalk;
+      'projects.html5-ads': ProjectsHtml5Ads;
+      'projects.website-display': ProjectsWebsiteDisplay;
       'quizz.all-quizz': QuizzAllQuizz;
       'quizz.single-quizz': QuizzSingleQuizz;
       'shared.all-service-section': SharedAllServiceSection;
