@@ -17,7 +17,7 @@
       "type": "text",
       "required": true
     },
-    "website_images": {
+    "images": {
       "type": "media",
       "multiple": true,
       "required": false,

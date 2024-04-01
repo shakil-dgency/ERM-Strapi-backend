@@ -64,6 +64,18 @@
     },
     "cro_cta_slug": {
       "type": "string"
+    },
+    "cro_slug_1": {
+      "type": "string"
+    },
+    "cro_slug_2": {
+      "type": "string"
+    },
+    "cro_slug_3": {
+      "type": "string"
+    },
+    "cro_slug_4": {
+      "type": "string"
     }
   }
 }

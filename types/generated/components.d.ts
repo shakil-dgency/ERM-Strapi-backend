@@ -385,11 +385,14 @@ export interface ProjectsHtml5Ads extends Schema.Component {
   collectionName: 'components_projects_html5_ads';
   info: {
     displayName: 'Html5 Ads';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
+    descriptive_cta: Attribute.String & Attribute.Required;
+    descriptive_cta_slug: Attribute.String;
   };
 }
 
@@ -403,7 +406,7 @@ export interface ProjectsWebsiteDisplay extends Schema.Component {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    website_images: Attribute.Media;
+    images: Attribute.Media;
     descriptive_cta: Attribute.String & Attribute.Required;
     descriptive_cta_slug: Attribute.String;
   };
@@ -497,6 +500,10 @@ export interface SharedCroOpportunities extends Schema.Component {
     cro_description4: Attribute.String & Attribute.Required;
     cro_opportunity_image: Attribute.Media & Attribute.Required;
     cro_cta_slug: Attribute.String;
+    cro_slug_1: Attribute.String;
+    cro_slug_2: Attribute.String;
+    cro_slug_3: Attribute.String;
+    cro_slug_4: Attribute.String;
   };
 }
 
