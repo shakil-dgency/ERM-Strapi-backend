@@ -32,12 +32,6 @@
       "component": "more.why-choose-us",
       "required": true
     },
-    "casestudy_section": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.case-study-section",
-      "required": true
-    },
     "footer_top_cta": {
       "type": "component",
       "repeatable": false,

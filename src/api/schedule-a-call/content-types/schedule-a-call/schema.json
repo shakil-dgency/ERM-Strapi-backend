@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "schedule_a_calls",
+  "info": {
+    "singularName": "schedule-a-call",
+    "pluralName": "schedule-a-calls",
+    "displayName": "Client Call",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "hero_title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "list_title": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.contact-list"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

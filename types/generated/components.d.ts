@@ -822,9 +822,10 @@ export interface UspContactList extends Schema.Component {
   collectionName: 'components_usp_contact_lists';
   info: {
     displayName: 'Contact List';
+    description: '';
   };
   attributes: {
-    list: Attribute.String & Attribute.Required;
+    list: Attribute.Text & Attribute.Required;
   };
 }
 

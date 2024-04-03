@@ -1,12 +1,13 @@
 {
   "collectionName": "components_usp_contact_lists",
   "info": {
-    "displayName": "Contact List"
+    "displayName": "Contact List",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "list": {
-      "type": "string",
+      "type": "text",
       "required": true
     }
   }

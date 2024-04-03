@@ -693,8 +693,6 @@ export interface ApiAboutAbout extends Schema.SingleType {
     portfolio: Attribute.Component<'more.portfolio'> & Attribute.Required;
     why_choose_us: Attribute.Component<'more.why-choose-us'> &
       Attribute.Required;
-    casestudy_section: Attribute.Component<'shared.case-study-section'> &
-      Attribute.Required;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
@@ -1718,6 +1716,42 @@ export interface ApiQuizzDetailQuizzDetail extends Schema.CollectionType {
   };
 }
 
+export interface ApiScheduleACallScheduleACall extends Schema.SingleType {
+  collectionName: 'schedule_a_calls';
+  info: {
+    singularName: 'schedule-a-call';
+    pluralName: 'schedule-a-calls';
+    displayName: 'Client Call';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text;
+    list_title: Attribute.String;
+    lists: Attribute.Component<'usp.contact-list', true>;
+    seo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::schedule-a-call.schedule-a-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::schedule-a-call.schedule-a-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSearchEngineOptimizationSearchEngineOptimization
   extends Schema.SingleType {
   collectionName: 'search_engine_optimizations';
@@ -2033,6 +2067,7 @@ declare module '@strapi/types' {
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::quizz.quizz': ApiQuizzQuizz;
       'api::quizz-detail.quizz-detail': ApiQuizzDetailQuizzDetail;
+      'api::schedule-a-call.schedule-a-call': ApiScheduleACallScheduleACall;
       'api::search-engine-optimization.search-engine-optimization': ApiSearchEngineOptimizationSearchEngineOptimization;
       'api::social-media-management.social-media-management': ApiSocialMediaManagementSocialMediaManagement;
       'api::team.team': ApiTeamTeam;
