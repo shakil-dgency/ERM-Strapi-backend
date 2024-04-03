@@ -1731,9 +1731,10 @@ export interface ApiScheduleACallScheduleACall extends Schema.SingleType {
     hero_title_first_line: Attribute.String & Attribute.Required;
     hero_title_second_line: Attribute.String;
     description: Attribute.Text;
-    list_title: Attribute.String;
-    lists: Attribute.Component<'usp.contact-list', true>;
+    section_title: Attribute.String;
     seo: Attribute.Component<'shared.seo'>;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
+    lists: Attribute.Component<'usp.contact-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
