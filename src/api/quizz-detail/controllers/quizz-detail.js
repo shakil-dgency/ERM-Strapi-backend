@@ -20,14 +20,18 @@ module.exports = createCoreController(
         .query("api::quizz-detail.quizz-detail")
         .findOne({
           where: { slug: id },
-          populate: [
-            "quizz_card_image",
-            "quizz_image_left",
-            "quizz_image_right",
-            "footer_top_cta",
-            "nav_icon",
-            "seo",
-          ],
+          populate: {
+            quizz_card_image: true,
+            quizz_image_left: true,
+            quizz_image_right: true,
+            footer_top_cta: true,
+            nav_icon: true,
+            seo: {
+              populate: {
+                metaImage: true,
+              },
+            },
+          },
         });
       const sanitizedResults = await this.sanitizeOutput(entity, ctx);
 
