@@ -1507,6 +1507,43 @@ export interface ApiOurWorkOurWork extends Schema.SingleType {
   };
 }
 
+export interface ApiPartnerProgramPartnerProgram extends Schema.SingleType {
+  collectionName: 'partner_programs';
+  info: {
+    singularName: 'partner-program';
+    pluralName: 'partner-programs';
+    displayName: 'Partner Program';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.other-hero'>;
+    testimonial: Attribute.Component<'partner-program.single-testimonial'>;
+    short_intro: Attribute.Component<'partner-program.short-intro'>;
+    services: Attribute.Component<'partner-program.services'>;
+    faq_section: Attribute.Component<'shared.faq-section'>;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
+    steps_section: Attribute.Component<'partner-program.steps-section'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partner-program.partner-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partner-program.partner-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPricePrice extends Schema.CollectionType {
   collectionName: 'prices';
   info: {
@@ -2063,6 +2100,7 @@ declare module '@strapi/types' {
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
       'api::our-work.our-work': ApiOurWorkOurWork;
+      'api::partner-program.partner-program': ApiPartnerProgramPartnerProgram;
       'api::price.price': ApiPricePrice;
       'api::price-page-information.price-page-information': ApiPricePageInformationPricePageInformation;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;

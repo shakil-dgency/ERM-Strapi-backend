@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_partner_program_steps",
+  "info": {
+    "displayName": "Steps"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -345,6 +345,91 @@ export interface MoreWhyChooseUs extends Schema.Component {
   };
 }
 
+export interface PartnerProgramAllService extends Schema.Component {
+  collectionName: 'components_partner_program_all_services';
+  info: {
+    displayName: 'All Service';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media;
+  };
+}
+
+export interface PartnerProgramCards extends Schema.Component {
+  collectionName: 'components_partner_program_cards';
+  info: {
+    displayName: 'Cards';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface PartnerProgramServices extends Schema.Component {
+  collectionName: 'components_partner_program_services';
+  info: {
+    displayName: 'Services';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    all_service: Attribute.Component<'partner-program.all-service', true>;
+  };
+}
+
+export interface PartnerProgramShortIntro extends Schema.Component {
+  collectionName: 'components_partner_program_short_intros';
+  info: {
+    displayName: 'Short Intro';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    lists: Attribute.Component<'usp.contact-list', true>;
+    cta: Attribute.String;
+    cta_slug: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
+export interface PartnerProgramSingleTestimonial extends Schema.Component {
+  collectionName: 'components_partner_program_single_testimonials';
+  info: {
+    displayName: 'Single Testimonial';
+  };
+  attributes: {
+    cards: Attribute.Component<'partner-program.cards', true>;
+    message: Attribute.Text & Attribute.Required;
+    image: Attribute.Media;
+    name: Attribute.String & Attribute.Required;
+    company_name: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface PartnerProgramStepsSection extends Schema.Component {
+  collectionName: 'components_partner_program_steps_sections';
+  info: {
+    displayName: 'Steps Section';
+  };
+  attributes: {
+    title: Attribute.String;
+    steps: Attribute.Component<'partner-program.steps', true>;
+  };
+}
+
+export interface PartnerProgramSteps extends Schema.Component {
+  collectionName: 'components_partner_program_steps';
+  info: {
+    displayName: 'Steps';
+  };
+  attributes: {
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface PriceServiceItem extends Schema.Component {
   collectionName: 'components_price_service_items';
   info: {
@@ -681,10 +766,14 @@ export interface SharedOtherHero extends Schema.Component {
   collectionName: 'components_shared_other_heroes';
   info: {
     displayName: 'Other Hero';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
+    description: Attribute.Text;
+    hero_cta: Attribute.String;
+    hero_cta_slug: Attribute.String;
   };
 }
 
@@ -927,6 +1016,13 @@ declare module '@strapi/types' {
       'more.single-member': MoreSingleMember;
       'more.team-member': MoreTeamMember;
       'more.why-choose-us': MoreWhyChooseUs;
+      'partner-program.all-service': PartnerProgramAllService;
+      'partner-program.cards': PartnerProgramCards;
+      'partner-program.services': PartnerProgramServices;
+      'partner-program.short-intro': PartnerProgramShortIntro;
+      'partner-program.single-testimonial': PartnerProgramSingleTestimonial;
+      'partner-program.steps-section': PartnerProgramStepsSection;
+      'partner-program.steps': PartnerProgramSteps;
       'price.service-item': PriceServiceItem;
       'projects.ceo-s-talk': ProjectsCeoSTalk;
       'projects.html5-ads': ProjectsHtml5Ads;

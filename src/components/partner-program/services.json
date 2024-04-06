@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_partner_program_services",
+  "info": {
+    "displayName": "Services"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "all_service": {
+      "displayName": "All Service",
+      "type": "component",
+      "repeatable": true,
+      "component": "partner-program.all-service"
+    }
+  }
+}

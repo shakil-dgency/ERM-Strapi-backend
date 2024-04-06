@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_partner_program_short_intros",
+  "info": {
+    "displayName": "Short Intro"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.contact-list"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "cta_slug": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

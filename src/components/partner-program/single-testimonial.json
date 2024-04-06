@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_partner_program_single_testimonials",
+  "info": {
+    "displayName": "Single Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "displayName": "Cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "partner-program.cards"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "company_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "partner_programs",
+  "info": {
+    "singularName": "partner-program",
+    "pluralName": "partner-programs",
+    "displayName": "Partner Program",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.other-hero"
+    },
+    "testimonial": {
+      "displayName": "Single Testimonial",
+      "type": "component",
+      "repeatable": false,
+      "component": "partner-program.single-testimonial"
+    },
+    "short_intro": {
+      "displayName": "Short Intro",
+      "type": "component",
+      "repeatable": false,
+      "component": "partner-program.short-intro"
+    },
+    "services": {
+      "displayName": "Services",
+      "type": "component",
+      "repeatable": false,
+      "component": "partner-program.services"
+    },
+    "faq_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.faq-section"
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta"
+    },
+    "steps_section": {
+      "displayName": "Steps Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "partner-program.steps-section"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_partner_program_steps_sections",
+  "info": {
+    "displayName": "Steps Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "partner-program.steps"
+    }
+  }
+}
