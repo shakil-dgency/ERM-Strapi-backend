@@ -1501,6 +1501,40 @@ export interface ApiMicrosoftAdMicrosoftAd extends Schema.SingleType {
   };
 }
 
+export interface ApiNotFoundErrorNotFoundError extends Schema.SingleType {
+  collectionName: 'not_found_errors';
+  info: {
+    singularName: 'not-found-error';
+    pluralName: 'not-found-errors';
+    displayName: 'Not Found Error';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_first_line: Attribute.String;
+    title_second_line: Attribute.String;
+    short_description: Attribute.String;
+    cta: Attribute.String;
+    cta_slug: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::not-found-error.not-found-error',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::not-found-error.not-found-error',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurWorkOurWork extends Schema.SingleType {
   collectionName: 'our_works';
   info: {
@@ -2049,6 +2083,54 @@ export interface ApiTestimonialTestimonial extends Schema.SingleType {
   };
 }
 
+export interface ApiThankYouThankYou extends Schema.SingleType {
+  collectionName: 'thank_yous';
+  info: {
+    singularName: 'thank-you';
+    pluralName: 'thank-yous';
+    displayName: 'Thank You';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    calender_top_message: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    calenly_url: Attribute.String;
+    calender_bottom_message: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::thank-you.thank-you',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::thank-you.thank-you',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWebsiteDevelopmentWebsiteDevelopment
   extends Schema.SingleType {
   collectionName: 'website_developments';
@@ -2137,6 +2219,7 @@ declare module '@strapi/types' {
       'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
+      'api::not-found-error.not-found-error': ApiNotFoundErrorNotFoundError;
       'api::our-work.our-work': ApiOurWorkOurWork;
       'api::partner-program.partner-program': ApiPartnerProgramPartnerProgram;
       'api::price.price': ApiPricePrice;
@@ -2150,6 +2233,7 @@ declare module '@strapi/types' {
       'api::team.team': ApiTeamTeam;
       'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::thank-you.thank-you': ApiThankYouThankYou;
       'api::website-development.website-development': ApiWebsiteDevelopmentWebsiteDevelopment;
     }
   }

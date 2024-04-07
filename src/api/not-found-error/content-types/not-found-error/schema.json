@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "not_found_errors",
+  "info": {
+    "singularName": "not-found-error",
+    "pluralName": "not-found-errors",
+    "displayName": "Not Found Error"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string"
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "cta_slug": {
+      "type": "string"
+    }
+  }
+}

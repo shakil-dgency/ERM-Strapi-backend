@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "thank_yous",
+  "info": {
+    "singularName": "thank-you",
+    "pluralName": "thank-yous",
+    "displayName": "Thank You",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "calender_top_message": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "calenly_url": {
+      "type": "string"
+    },
+    "calender_bottom_message": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
