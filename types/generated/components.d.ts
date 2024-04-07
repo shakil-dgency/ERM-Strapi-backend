@@ -424,9 +424,11 @@ export interface PartnerProgramSteps extends Schema.Component {
   collectionName: 'components_partner_program_steps';
   info: {
     displayName: 'Steps';
+    description: '';
   };
   attributes: {
     description: Attribute.Text & Attribute.Required;
+    steps_id: Attribute.String;
   };
 }
 

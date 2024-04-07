@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "demo_calls",
+  "info": {
+    "singularName": "demo-call",
+    "pluralName": "demo-calls",
+    "displayName": "Demo Call"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "hero_title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "section_title": {
+      "type": "string",
+      "required": true
+    },
+    "lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "usp.contact-card"
+    },
+    "calenly_url": {
+      "type": "string"
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

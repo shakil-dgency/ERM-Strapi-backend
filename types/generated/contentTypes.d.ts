@@ -999,6 +999,43 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
   };
 }
 
+export interface ApiDemoCallDemoCall extends Schema.SingleType {
+  collectionName: 'demo_calls';
+  info: {
+    singularName: 'demo-call';
+    pluralName: 'demo-calls';
+    displayName: 'Demo Call';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero_title_first_line: Attribute.String & Attribute.Required;
+    hero_title_second_line: Attribute.String;
+    description: Attribute.Text;
+    section_title: Attribute.String & Attribute.Required;
+    lists: Attribute.Component<'usp.contact-card', true>;
+    calenly_url: Attribute.String;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
+    seo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::demo-call.demo-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::demo-call.demo-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
   collectionName: 'email_marketings';
   info: {
@@ -1519,13 +1556,13 @@ export interface ApiPartnerProgramPartnerProgram extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    hero: Attribute.Component<'shared.other-hero'>;
     testimonial: Attribute.Component<'partner-program.single-testimonial'>;
     short_intro: Attribute.Component<'partner-program.short-intro'>;
     services: Attribute.Component<'partner-program.services'>;
     faq_section: Attribute.Component<'shared.faq-section'>;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     steps_section: Attribute.Component<'partner-program.steps-section'>;
+    hero: Attribute.Component<'shared.service-hero'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2090,6 +2127,7 @@ declare module '@strapi/types' {
       'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::demo-call.demo-call': ApiDemoCallDemoCall;
       'api::email-marketing.email-marketing': ApiEmailMarketingEmailMarketing;
       'api::facebook-and-instagram-ad.facebook-and-instagram-ad': ApiFacebookAndInstagramAdFacebookAndInstagramAd;
       'api::faq.faq': ApiFaqFaq;

@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "hero": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.other-hero"
-    },
     "testimonial": {
       "displayName": "Single Testimonial",
       "type": "component",
@@ -50,6 +45,11 @@
       "type": "component",
       "repeatable": false,
       "component": "partner-program.steps-section"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.service-hero"
     }
   }
 }
