@@ -4,7 +4,8 @@
   "info": {
     "singularName": "not-found-error",
     "pluralName": "not-found-errors",
-    "displayName": "Not Found Error"
+    "displayName": "Not Found Error",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,11 @@
     },
     "cta_slug": {
       "type": "string"
+    },
+    "footer_top_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-top-cta"
     }
   }
 }

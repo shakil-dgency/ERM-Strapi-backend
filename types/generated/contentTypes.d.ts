@@ -1428,6 +1428,7 @@ export interface ApiLinkedInAdLinkedInAd extends Schema.SingleType {
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    fine_tune_website: Attribute.Component<'more.fine-tuned-website'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1507,6 +1508,7 @@ export interface ApiNotFoundErrorNotFoundError extends Schema.SingleType {
     singularName: 'not-found-error';
     pluralName: 'not-found-errors';
     displayName: 'Not Found Error';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1517,6 +1519,7 @@ export interface ApiNotFoundErrorNotFoundError extends Schema.SingleType {
     short_description: Attribute.String;
     cta: Attribute.String;
     cta_slug: Attribute.String;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
