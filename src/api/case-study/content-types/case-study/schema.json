@@ -25,14 +25,6 @@
       "targetField": "title",
       "required": true
     },
-    "hero_logo": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "title_first_line": {
       "type": "string",
       "required": true
@@ -83,26 +75,17 @@
       "type": "text",
       "required": true
     },
-    "address": {
+    "location": {
       "type": "string",
       "required": true
     },
-    "industry": {
+    "business_type": {
       "type": "string",
       "required": true
     },
     "card_cta": {
       "type": "string",
       "required": true
-    },
-    "service_rendered": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
     },
     "footer_top_cta": {
       "type": "component",
@@ -114,6 +97,18 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "service_rendered": {
+      "displayName": "Services Rendered",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.services-rendered"
+    },
+    "case_details_note_title": {
+      "type": "string"
+    },
+    "case_details_note_description": {
+      "type": "text"
     }
   }
 }

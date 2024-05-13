@@ -911,7 +911,6 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::case-study.case-study', 'title'> &
       Attribute.Required;
-    hero_logo: Attribute.Media & Attribute.Required;
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     statistic_1: Attribute.String & Attribute.Required;
@@ -925,21 +924,15 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     case_details: Attribute.Component<'more.case-studies-details', true> &
       Attribute.Required;
     about_client: Attribute.Text & Attribute.Required;
-    address: Attribute.String & Attribute.Required;
-    industry: Attribute.String & Attribute.Required;
+    location: Attribute.String & Attribute.Required;
+    business_type: Attribute.String & Attribute.Required;
     card_cta: Attribute.String & Attribute.Required;
-    service_rendered: Attribute.RichText &
-      Attribute.Required &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    service_rendered: Attribute.Component<'more.services-rendered', true>;
+    case_details_note_title: Attribute.String;
+    case_details_note_description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

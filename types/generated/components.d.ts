@@ -282,6 +282,17 @@ export interface MoreQualityOfAEmployee extends Schema.Component {
   };
 }
 
+export interface MoreServicesRendered extends Schema.Component {
+  collectionName: 'components_more_services_rendereds';
+  info: {
+    displayName: 'Services Rendered';
+  };
+  attributes: {
+    title: Attribute.String;
+    slug: Attribute.String;
+  };
+}
+
 export interface MoreSingleMember extends Schema.Component {
   collectionName: 'components_more_single_members';
   info: {
@@ -1015,6 +1026,7 @@ declare module '@strapi/types' {
       'more.job-post': MoreJobPost;
       'more.portfolio': MorePortfolio;
       'more.quality-of-a-employee': MoreQualityOfAEmployee;
+      'more.services-rendered': MoreServicesRendered;
       'more.single-member': MoreSingleMember;
       'more.team-member': MoreTeamMember;
       'more.why-choose-us': MoreWhyChooseUs;

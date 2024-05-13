@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_more_services_rendereds",
+  "info": {
+    "displayName": "Services Rendered"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
