@@ -24,6 +24,7 @@ module.exports = createCoreController(
           populate: [
             "case_details",
             "service_rendered",
+            "card_image",
             "footer_top_cta",
             "seo",
           ],

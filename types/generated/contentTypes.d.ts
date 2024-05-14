@@ -911,8 +911,6 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::case-study.case-study', 'title'> &
       Attribute.Required;
-    title_first_line: Attribute.String & Attribute.Required;
-    title_second_line: Attribute.String;
     statistic_1: Attribute.String & Attribute.Required;
     statistic_2: Attribute.String & Attribute.Required;
     statistic_3: Attribute.String & Attribute.Required;
@@ -933,6 +931,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     service_rendered: Attribute.Component<'more.services-rendered', true>;
     case_details_note_title: Attribute.String;
     case_details_note_description: Attribute.Text;
+    card_image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

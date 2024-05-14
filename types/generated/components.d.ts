@@ -562,6 +562,11 @@ export interface SharedCaseStudySection extends Schema.Component {
     description: Attribute.Text & Attribute.Required;
     descriptive_cta: Attribute.String & Attribute.Required;
     descriptive_cta_slug: Attribute.String;
+    case_studies: Attribute.Relation<
+      'shared.case-study-section',
+      'oneToMany',
+      'api::case-study.case-study'
+    >;
   };
 }
 
