@@ -46,10 +46,11 @@
       "repeatable": false,
       "component": "partner-program.steps-section"
     },
-    "hero": {
+    "partner_hero": {
+      "displayName": "Partner Hero",
       "type": "component",
       "repeatable": false,
-      "component": "shared.service-hero"
+      "component": "partner-program.partner-hero"
     }
   }
 }

@@ -379,6 +379,22 @@ export interface PartnerProgramCards extends Schema.Component {
   };
 }
 
+export interface PartnerProgramPartnerHero extends Schema.Component {
+  collectionName: 'components_partner_program_partner_heroes';
+  info: {
+    displayName: 'Partner Hero';
+  };
+  attributes: {
+    left_image: Attribute.Media;
+    right_image: Attribute.Media;
+    title_first_line: Attribute.String;
+    title_second_line: Attribute.String;
+    hero_description: Attribute.Text;
+    hero_cta: Attribute.String;
+    hero_cta_slug: Attribute.String;
+  };
+}
+
 export interface PartnerProgramServices extends Schema.Component {
   collectionName: 'components_partner_program_services';
   info: {
@@ -1037,6 +1053,7 @@ declare module '@strapi/types' {
       'more.why-choose-us': MoreWhyChooseUs;
       'partner-program.all-service': PartnerProgramAllService;
       'partner-program.cards': PartnerProgramCards;
+      'partner-program.partner-hero': PartnerProgramPartnerHero;
       'partner-program.services': PartnerProgramServices;
       'partner-program.short-intro': PartnerProgramShortIntro;
       'partner-program.single-testimonial': PartnerProgramSingleTestimonial;

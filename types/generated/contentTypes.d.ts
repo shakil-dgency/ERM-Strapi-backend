@@ -1591,7 +1591,7 @@ export interface ApiPartnerProgramPartnerProgram extends Schema.SingleType {
     faq_section: Attribute.Component<'shared.faq-section'>;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     steps_section: Attribute.Component<'partner-program.steps-section'>;
-    hero: Attribute.Component<'shared.service-hero'>;
+    partner_hero: Attribute.Component<'partner-program.partner-hero'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

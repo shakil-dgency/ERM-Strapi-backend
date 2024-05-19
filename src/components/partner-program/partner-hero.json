@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_partner_program_partner_heroes",
+  "info": {
+    "displayName": "Partner Hero"
+  },
+  "options": {},
+  "attributes": {
+    "left_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "right_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title_first_line": {
+      "type": "string"
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "text"
+    },
+    "hero_cta": {
+      "type": "string"
+    },
+    "hero_cta_slug": {
+      "type": "string"
+    }
+  }
+}
