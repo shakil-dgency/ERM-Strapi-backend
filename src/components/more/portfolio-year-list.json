@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_more_portfolio_year_lists",
+  "info": {
+    "displayName": "Portfolio Year List"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

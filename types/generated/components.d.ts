@@ -246,19 +246,29 @@ export interface MoreJobPost extends Schema.Component {
   };
 }
 
+export interface MorePortfolioYearList extends Schema.Component {
+  collectionName: 'components_more_portfolio_year_lists';
+  info: {
+    displayName: 'Portfolio Year List';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface MorePortfolio extends Schema.Component {
   collectionName: 'components_more_portfolios';
   info: {
     displayName: 'Portfolio';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
     description: Attribute.Text & Attribute.Required;
-    portfolio1: Attribute.Text;
-    portfolio2: Attribute.Text;
-    portfolio3: Attribute.Text;
-    portfolio4: Attribute.Text;
+    portfolio_year: Attribute.Component<'more.portfolio-year-list', true>;
   };
 }
 
@@ -343,6 +353,7 @@ export interface MoreWhyChooseUs extends Schema.Component {
   collectionName: 'components_more_why_choose_uses';
   info: {
     displayName: 'Why Choose Us';
+    description: '';
   };
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
@@ -353,6 +364,10 @@ export interface MoreWhyChooseUs extends Schema.Component {
     card_one_description: Attribute.Text & Attribute.Required;
     card_two_description: Attribute.Text & Attribute.Required;
     card_three_description: Attribute.Text & Attribute.Required;
+    card_four_title: Attribute.String;
+    card_five_title: Attribute.String;
+    card_four_description: Attribute.Text;
+    card_five_description: Attribute.Text;
   };
 }
 
@@ -1045,6 +1060,7 @@ declare module '@strapi/types' {
       'more.fine-tuned-website': MoreFineTunedWebsite;
       'more.job-post-card': MoreJobPostCard;
       'more.job-post': MoreJobPost;
+      'more.portfolio-year-list': MorePortfolioYearList;
       'more.portfolio': MorePortfolio;
       'more.quality-of-a-employee': MoreQualityOfAEmployee;
       'more.services-rendered': MoreServicesRendered;

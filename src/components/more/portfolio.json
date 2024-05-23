@@ -1,7 +1,8 @@
 {
   "collectionName": "components_more_portfolios",
   "info": {
-    "displayName": "Portfolio"
+    "displayName": "Portfolio",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,17 +18,11 @@
       "type": "text",
       "required": true
     },
-    "portfolio1": {
-      "type": "text"
-    },
-    "portfolio2": {
-      "type": "text"
-    },
-    "portfolio3": {
-      "type": "text"
-    },
-    "portfolio4": {
-      "type": "text"
+    "portfolio_year": {
+      "displayName": "Portfolio Year List",
+      "type": "component",
+      "repeatable": true,
+      "component": "more.portfolio-year-list"
     }
   }
 }

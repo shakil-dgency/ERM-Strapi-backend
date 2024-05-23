@@ -1,7 +1,8 @@
 {
   "collectionName": "components_more_why_choose_uses",
   "info": {
-    "displayName": "Why Choose Us"
+    "displayName": "Why Choose Us",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -35,6 +36,18 @@
     "card_three_description": {
       "type": "text",
       "required": true
+    },
+    "card_four_title": {
+      "type": "string"
+    },
+    "card_five_title": {
+      "type": "string"
+    },
+    "card_four_description": {
+      "type": "text"
+    },
+    "card_five_description": {
+      "type": "text"
     }
   }
 }
