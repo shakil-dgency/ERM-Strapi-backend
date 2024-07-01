@@ -178,6 +178,21 @@ export interface HomeWiningStrategy extends Schema.Component {
   };
 }
 
+export interface HomeWorldMap extends Schema.Component {
+  collectionName: 'components_home_world_maps';
+  info: {
+    displayName: 'World Map';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    cta: Attribute.String;
+    cta_slug: Attribute.String;
+  };
+}
+
 export interface MoreCaseStudiesDetails extends Schema.Component {
   collectionName: 'components_more_case_studies_details';
   info: {
@@ -1055,6 +1070,7 @@ declare module '@strapi/types' {
       'home.only-erm-agency': HomeOnlyErmAgency;
       'home.our-clients': HomeOurClients;
       'home.wining-strategy': HomeWiningStrategy;
+      'home.world-map': HomeWorldMap;
       'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;
       'more.fine-tuned-website': MoreFineTunedWebsite;

@@ -40,6 +40,9 @@
       "type": "component",
       "repeatable": true,
       "component": "usp.contact-card"
+    },
+    "calendar_url": {
+      "type": "text"
     }
   }
 }

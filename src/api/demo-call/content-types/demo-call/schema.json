@@ -4,7 +4,8 @@
   "info": {
     "singularName": "demo-call",
     "pluralName": "demo-calls",
-    "displayName": "Demo Call"
+    "displayName": "Demo Call",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,8 +31,8 @@
       "repeatable": true,
       "component": "usp.contact-card"
     },
-    "calenly_url": {
-      "type": "string"
+    "calendar_url": {
+      "type": "text"
     },
     "footer_top_cta": {
       "type": "component",

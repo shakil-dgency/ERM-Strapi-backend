@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_world_maps",
+  "info": {
+    "displayName": "World Map"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string",
+      "required": true
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta": {
+      "type": "string"
+    },
+    "cta_slug": {
+      "type": "string"
+    }
+  }
+}

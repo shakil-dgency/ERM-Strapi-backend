@@ -997,6 +997,7 @@ export interface ApiDemoCallDemoCall extends Schema.SingleType {
     singularName: 'demo-call';
     pluralName: 'demo-calls';
     displayName: 'Demo Call';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1007,7 +1008,7 @@ export interface ApiDemoCallDemoCall extends Schema.SingleType {
     description: Attribute.Text;
     section_title: Attribute.String & Attribute.Required;
     lists: Attribute.Component<'usp.contact-card', true>;
-    calenly_url: Attribute.String;
+    calendar_url: Attribute.Text;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
@@ -1310,6 +1311,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     seo: Attribute.Component<'shared.seo'>;
     google_analytics: Attribute.Component<'home.google-analytics'> &
       Attribute.Required;
+    world_map: Attribute.Component<'home.world-map'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1838,6 +1840,7 @@ export interface ApiScheduleACallScheduleACall extends Schema.SingleType {
     seo: Attribute.Component<'shared.seo'>;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     lists: Attribute.Component<'usp.contact-card', true>;
+    calendar_url: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
