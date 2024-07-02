@@ -13,6 +13,8 @@ module.exports = createCoreController(
   "api::case-study.case-study",
   // @ts-ignore
   ({ strapi }) => ({
+
+
     async findOne(ctx) {
       const { id } = ctx.params;
 
