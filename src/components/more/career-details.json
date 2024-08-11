@@ -1,16 +1,15 @@
 {
-  "collectionName": "components_more_case_studies_details",
+  "collectionName": "components_more_career_details",
   "info": {
-    "displayName": "Case Studies Details",
+    "displayName": "Career Details",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "case_title": {
-      "type": "string",
-      "required": true
+    "title": {
+      "type": "string"
     },
-    "case_details": {
+    "details": {
       "type": "customField",
       "options": {
         "output": "HTML",

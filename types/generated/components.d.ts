@@ -193,10 +193,30 @@ export interface HomeWorldMap extends Schema.Component {
   };
 }
 
+export interface MoreCareerDetails extends Schema.Component {
+  collectionName: 'components_more_career_details';
+  info: {
+    displayName: 'Career Details';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    details: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+  };
+}
+
 export interface MoreCaseStudiesDetails extends Schema.Component {
   collectionName: 'components_more_case_studies_details';
   info: {
     displayName: 'Case Studies Details';
+    description: '';
   };
   attributes: {
     case_title: Attribute.String & Attribute.Required;
@@ -255,9 +275,12 @@ export interface MoreJobPost extends Schema.Component {
   attributes: {
     title_first_line: Attribute.String & Attribute.Required;
     title_second_line: Attribute.String;
-    job_post_card: Attribute.Component<'more.job-post-card', true> &
-      Attribute.Required;
     description: Attribute.Text & Attribute.Required;
+    career_details: Attribute.Relation<
+      'more.job-post',
+      'oneToMany',
+      'api::career-detail.career-detail'
+    >;
   };
 }
 
@@ -1071,6 +1094,7 @@ declare module '@strapi/types' {
       'home.our-clients': HomeOurClients;
       'home.wining-strategy': HomeWiningStrategy;
       'home.world-map': HomeWorldMap;
+      'more.career-details': MoreCareerDetails;
       'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;
       'more.fine-tuned-website': MoreFineTunedWebsite;

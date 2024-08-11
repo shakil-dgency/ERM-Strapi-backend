@@ -13,16 +13,14 @@
     "title_second_line": {
       "type": "string"
     },
-    "job_post_card": {
-      "displayName": "Job Post Card",
-      "type": "component",
-      "repeatable": true,
-      "component": "more.job-post-card",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
+    },
+    "career_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::career-detail.career-detail"
     }
   }
 }

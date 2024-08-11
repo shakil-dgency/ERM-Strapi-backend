@@ -859,6 +859,54 @@ export interface ApiCareerCareer extends Schema.SingleType {
   };
 }
 
+export interface ApiCareerDetailCareerDetail extends Schema.CollectionType {
+  collectionName: 'career_details';
+  info: {
+    singularName: 'career-detail';
+    pluralName: 'career-details';
+    displayName: 'Career Detail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_first_line: Attribute.String;
+    title_second_line: Attribute.String;
+    job_title: Attribute.String;
+    slug: Attribute.UID<'api::career-detail.career-detail', 'job_title'>;
+    about_company: Attribute.Text;
+    location: Attribute.String;
+    business_type: Attribute.String;
+    facilities: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    short_description: Attribute.Text;
+    seo: Attribute.Component<'shared.seo'>;
+    career_details: Attribute.Component<'more.career-details', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career-detail.career-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career-detail.career-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCaseStudiesPageCaseStudiesPage extends Schema.SingleType {
   collectionName: 'case_studies_pages';
   info: {
@@ -2204,6 +2252,7 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::career.career': ApiCareerCareer;
+      'api::career-detail.career-detail': ApiCareerDetailCareerDetail;
       'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::contact-page.contact-page': ApiContactPageContactPage;
