@@ -1118,6 +1118,7 @@ export interface ApiEmailMarketingEmailMarketing extends Schema.SingleType {
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2213,6 +2214,7 @@ export interface ApiWebsiteDevelopmentWebsiteDevelopment
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'> &
       Attribute.Required;
     seo: Attribute.Component<'shared.seo'>;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
