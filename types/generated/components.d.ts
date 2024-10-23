@@ -193,6 +193,25 @@ export interface HomeWorldMap extends Schema.Component {
   };
 }
 
+export interface LocationLocationHero extends Schema.Component {
+  collectionName: 'components_location_location_heroes';
+  info: {
+    displayName: 'Location Hero';
+    description: '';
+  };
+  attributes: {
+    title_first_line: Attribute.String & Attribute.Required;
+    title_second_line: Attribute.String;
+    description: Attribute.Text & Attribute.Required;
+    cta: Attribute.String;
+    description_under_cta: Attribute.String & Attribute.Required;
+    background_image: Attribute.Media & Attribute.Required;
+    left_image: Attribute.Media;
+    right_image: Attribute.Media;
+    mobile_background_image: Attribute.Media;
+  };
+}
+
 export interface MoreCareerDetails extends Schema.Component {
   collectionName: 'components_more_career_details';
   info: {
@@ -1094,6 +1113,7 @@ declare module '@strapi/types' {
       'home.our-clients': HomeOurClients;
       'home.wining-strategy': HomeWiningStrategy;
       'home.world-map': HomeWorldMap;
+      'location.location-hero': LocationLocationHero;
       'more.career-details': MoreCareerDetails;
       'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;

@@ -1490,6 +1490,48 @@ export interface ApiLinkedInAdLinkedInAd extends Schema.SingleType {
   };
 }
 
+export interface ApiLocationLocation extends Schema.CollectionType {
+  collectionName: 'locations';
+  info: {
+    singularName: 'location';
+    pluralName: 'locations';
+    displayName: 'Location';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'location.location-hero'>;
+    world_map: Attribute.Component<'home.world-map'>;
+    cro_opportunities: Attribute.Component<'shared.cro-opportunities'>;
+    google_analytics: Attribute.Component<'home.google-analytics'>;
+    other_services: Attribute.Component<'shared.all-service-section'>;
+    our_clients: Attribute.Component<'home.our-clients'>;
+    only_erm_agency: Attribute.Component<'home.only-erm-agency'>;
+    dedicated_team: Attribute.Component<'shared.dedicated-team'>;
+    wining_strategy: Attribute.Component<'home.wining-strategy'>;
+    testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'>;
+    footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::location.location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::location.location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMicrosoftAdMicrosoftAd extends Schema.SingleType {
   collectionName: 'microsoft_ads';
   info: {
@@ -2267,6 +2309,7 @@ declare module '@strapi/types' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page-development.landing-page-development': ApiLandingPageDevelopmentLandingPageDevelopment;
       'api::linked-in-ad.linked-in-ad': ApiLinkedInAdLinkedInAd;
+      'api::location.location': ApiLocationLocation;
       'api::microsoft-ad.microsoft-ad': ApiMicrosoftAdMicrosoftAd;
       'api::not-found-error.not-found-error': ApiNotFoundErrorNotFoundError;
       'api::our-work.our-work': ApiOurWorkOurWork;
