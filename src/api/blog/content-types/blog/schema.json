@@ -42,6 +42,12 @@
       },
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "pin_post": {
+      "type": "boolean"
+    },
+    "pinpost_id": {
+      "type": "uid"
     }
   }
 }

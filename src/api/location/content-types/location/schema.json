@@ -68,7 +68,12 @@
       "component": "shared.footer-top-cta"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "country_name"
+    },
+    "country_name": {
+      "type": "string",
+      "required": true
     }
   }
 }

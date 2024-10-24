@@ -778,6 +778,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    pin_post: Attribute.Boolean;
+    pinpost_id: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1513,7 +1515,8 @@ export interface ApiLocationLocation extends Schema.CollectionType {
     wining_strategy: Attribute.Component<'home.wining-strategy'>;
     testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'>;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
-    slug: Attribute.UID;
+    slug: Attribute.UID<'api::location.location', 'country_name'>;
+    country_name: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
