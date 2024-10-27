@@ -1517,6 +1517,7 @@ export interface ApiLocationLocation extends Schema.CollectionType {
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     slug: Attribute.UID<'api::location.location', 'country_name'>;
     country_name: Attribute.String & Attribute.Required;
+    location_id: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

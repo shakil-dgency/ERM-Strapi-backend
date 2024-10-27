@@ -74,6 +74,9 @@
     "country_name": {
       "type": "string",
       "required": true
+    },
+    "location_id": {
+      "type": "uid"
     }
   }
 }
