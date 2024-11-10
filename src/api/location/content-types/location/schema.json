@@ -47,11 +47,6 @@
       "repeatable": false,
       "component": "home.only-erm-agency"
     },
-    "dedicated_team": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.dedicated-team"
-    },
     "wining_strategy": {
       "type": "component",
       "repeatable": false,
@@ -77,6 +72,17 @@
     },
     "location_id": {
       "type": "uid"
+    },
+    "campain_strategy": {
+      "displayName": "Campain Strategy",
+      "type": "component",
+      "repeatable": false,
+      "component": "location.campain-strategy"
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section"
     }
   }
 }

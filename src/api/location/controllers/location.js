@@ -40,11 +40,7 @@ module.exports = createCoreController(
             cro_opportunity_image: true,
           },
         },
-        google_analytics: {
-          populate: {
-            image: true,
-          },
-        },
+
         other_services: {
           populate: {
             other_services_card: {
@@ -52,6 +48,25 @@ module.exports = createCoreController(
                 card_image: true,
               },
             },
+          },
+        },
+        campain_strategy:{
+          populate:{
+            strategy_card :{
+              populate:{
+                image: true,
+              }
+            }
+          }
+        },
+        casestudy_section:{
+          populate:{
+            case_studies:true
+          }
+        },
+        google_analytics: {
+          populate: {
+            image: true,
           },
         },
         our_clients: {
@@ -66,11 +81,6 @@ module.exports = createCoreController(
                 image: true,
               },
             },
-          },
-        },
-        dedicated_team: {
-          populate: {
-            team_image: true,
           },
         },
         wining_strategy: {

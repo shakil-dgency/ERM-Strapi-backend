@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_location_campain_strategies",
+  "info": {
+    "displayName": "Campain Strategy"
+  },
+  "options": {},
+  "attributes": {
+    "title_first_line": {
+      "type": "string"
+    },
+    "title_second_line": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "strategy_card": {
+      "displayName": "Strategy Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "location.strategy-card"
+    }
+  }
+}

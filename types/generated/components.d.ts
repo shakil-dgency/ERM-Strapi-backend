@@ -193,6 +193,19 @@ export interface HomeWorldMap extends Schema.Component {
   };
 }
 
+export interface LocationCampainStrategy extends Schema.Component {
+  collectionName: 'components_location_campain_strategies';
+  info: {
+    displayName: 'Campain Strategy';
+  };
+  attributes: {
+    title_first_line: Attribute.String;
+    title_second_line: Attribute.String;
+    description: Attribute.Text;
+    strategy_card: Attribute.Component<'location.strategy-card', true>;
+  };
+}
+
 export interface LocationLocationHero extends Schema.Component {
   collectionName: 'components_location_location_heroes';
   info: {
@@ -209,6 +222,28 @@ export interface LocationLocationHero extends Schema.Component {
     left_image: Attribute.Media;
     right_image: Attribute.Media;
     mobile_background_image: Attribute.Media;
+  };
+}
+
+export interface LocationStrategyCard extends Schema.Component {
+  collectionName: 'components_location_strategy_cards';
+  info: {
+    displayName: 'Strategy Card';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    key_points: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    hex_color: Attribute.String;
   };
 }
 
@@ -1113,7 +1148,9 @@ declare module '@strapi/types' {
       'home.our-clients': HomeOurClients;
       'home.wining-strategy': HomeWiningStrategy;
       'home.world-map': HomeWorldMap;
+      'location.campain-strategy': LocationCampainStrategy;
       'location.location-hero': LocationLocationHero;
+      'location.strategy-card': LocationStrategyCard;
       'more.career-details': MoreCareerDetails;
       'more.case-studies-details': MoreCaseStudiesDetails;
       'more.employee-quality-card': MoreEmployeeQualityCard;

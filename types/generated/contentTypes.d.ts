@@ -1511,13 +1511,14 @@ export interface ApiLocationLocation extends Schema.CollectionType {
     other_services: Attribute.Component<'shared.all-service-section'>;
     our_clients: Attribute.Component<'home.our-clients'>;
     only_erm_agency: Attribute.Component<'home.only-erm-agency'>;
-    dedicated_team: Attribute.Component<'shared.dedicated-team'>;
     wining_strategy: Attribute.Component<'home.wining-strategy'>;
     testimonial_carousel: Attribute.Component<'shared.testimonial-carousel'>;
     footer_top_cta: Attribute.Component<'shared.footer-top-cta'>;
     slug: Attribute.UID<'api::location.location', 'country_name'>;
     country_name: Attribute.String & Attribute.Required;
     location_id: Attribute.UID;
+    campain_strategy: Attribute.Component<'location.campain-strategy'>;
+    casestudy_section: Attribute.Component<'shared.case-study-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
