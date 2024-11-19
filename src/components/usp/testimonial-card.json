@@ -1,7 +1,8 @@
 {
   "collectionName": "components_usp_testimonial_cards",
   "info": {
-    "displayName": "Testimonial Card"
+    "displayName": "Testimonial Card",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,19 +19,15 @@
       "required": true
     },
     "persons_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "company_logo": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
+    "title": {
+      "type": "string",
       "required": true
     }
   }

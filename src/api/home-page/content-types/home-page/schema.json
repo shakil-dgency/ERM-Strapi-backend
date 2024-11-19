@@ -50,18 +50,6 @@
       "component": "shared.key-service",
       "required": true
     },
-    "custom_marketing_plan": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.dedicated-team",
-      "required": true
-    },
-    "dedicated_team": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.dedicated-team",
-      "required": true
-    },
     "your_team_response": {
       "type": "component",
       "repeatable": false,
@@ -103,6 +91,11 @@
       "type": "component",
       "repeatable": false,
       "component": "home.world-map"
+    },
+    "casestudy_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.case-study-section"
     }
   }
 }

@@ -1111,13 +1111,14 @@ export interface UspTestimonialCard extends Schema.Component {
   collectionName: 'components_usp_testimonial_cards';
   info: {
     displayName: 'Testimonial Card';
+    description: '';
   };
   attributes: {
     persons_message: Attribute.Text & Attribute.Required;
     persons_name: Attribute.String & Attribute.Required;
     persons_occupation: Attribute.String & Attribute.Required;
     persons_image: Attribute.Media & Attribute.Required;
-    company_logo: Attribute.Media & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 

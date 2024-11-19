@@ -1347,10 +1347,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Required;
     choose_how_you_work: Attribute.Component<'shared.key-service'> &
       Attribute.Required;
-    custom_marketing_plan: Attribute.Component<'shared.dedicated-team'> &
-      Attribute.Required;
-    dedicated_team: Attribute.Component<'shared.dedicated-team'> &
-      Attribute.Required;
     your_team_response: Attribute.Component<'shared.key-service'> &
       Attribute.Required;
     wining_strategy: Attribute.Component<'home.wining-strategy'> &
@@ -1363,6 +1359,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     google_analytics: Attribute.Component<'home.google-analytics'> &
       Attribute.Required;
     world_map: Attribute.Component<'home.world-map'>;
+    casestudy_section: Attribute.Component<'shared.case-study-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
